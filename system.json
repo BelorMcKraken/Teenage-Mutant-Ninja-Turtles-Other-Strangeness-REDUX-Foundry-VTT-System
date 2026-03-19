@@ -10,7 +10,8 @@
   },
   "authors": [
     {
-      "name": "Belor McKraken"
+      "name": "Belor McKraken",
+      "url": "https://github.com/BelorMcKraken/Teenage-Mutant-Ninja-Turtles-Other-Strangeness-REDUX-Foundry-VTT-System/tree/main"
     }
   ],
   "esmodules": ["tmntos.mjs"],
@@ -41,5 +42,9 @@
   },
   "primaryTokenAttribute": "resources.hp",
   "secondaryTokenAttribute": "resources.sdc",
+  "url": "https://github.com/BelorMcKraken/Teenage-Mutant-Ninja-Turtles-Other-Strangeness-REDUX-Foundry-VTT-System/tree/main",
+  "mainifest": "https://github.com/BelorMcKraken/Teenage-Mutant-Ninja-Turtles-Other-Strangeness-REDUX-Foundry-VTT-System/blob/main/system.json",
+  "download": "https://github.com/BelorMcKraken/Teenage-Mutant-Ninja-Turtles-Other-Strangeness-REDUX-Foundry-VTT-System/tree/main",
+ 
   "socket": false
 }
