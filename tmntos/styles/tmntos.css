@@ -1,0 +1,613 @@
+.tmntos.character-sheet .window-content,
+.tmntos-page1-sheet {
+  background: #e9e7e1;
+  color: #111;
+}
+
+.tmntos.character-sheet .window-content {
+  padding: 0;
+}
+
+.tmntos-page1-sheet {
+  min-height: 100%;
+  padding: 12px;
+  font-family: "Signika", sans-serif;
+  font-size: 13px;
+  line-height: 1.15;
+}
+
+.tmntos-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tmntos-page + .tmntos-page {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 3px solid #2d2d2d;
+}
+
+.tmntos-page__top {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 14px;
+}
+
+.tmntos-page__middle,
+.tmntos-page__bottom {
+  display: block;
+}
+
+.tmntos-page__bottom {
+  display: grid;
+  grid-template-columns: 41% 59%;
+  gap: 14px;
+}
+
+.tmntos-left-col,
+.tmntos-right-col,
+.tmntos-bottom-left,
+.tmntos-bottom-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tmntos-logo-block {
+  min-height: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.tmntos-logo-title {
+  padding: 4px 6px;
+}
+
+.tmntos-logo-small {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.tmntos-logo-big {
+  font-size: 58px;
+  line-height: 0.9;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.tmntos-logo-sub {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tmntos-identity-block,
+.combat-style-block,
+.skills-block,
+.proficiencies-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tmntos-box {
+  border: 2px solid #2d2d2d;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 10px 12px 12px;
+}
+
+.tmntos-box__title,
+.tmntos-panel-title,
+.tmntos-sublist__title,
+.skills-header,
+.proficiencies-header,
+.weapons-header {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tmntos-panel-title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.tmntos-panel-title--sub {
+  margin-top: 8px;
+}
+
+.attribute-row {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.speed-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.speed-grid--bottom {
+  margin-top: 0;
+}
+
+.tmntos-inline-3,
+.tmntos-inline-4,
+.combat-inline,
+.combat-inline--five {
+  display: grid;
+  gap: 10px;
+}
+
+.tmntos-inline-3 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tmntos-inline-4 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.combat-inline {
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+}
+
+.combat-inline--five {
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+}
+
+.line-field {
+  display: flex;
+  align-items: end;
+  gap: 6px;
+  min-height: 24px;
+}
+
+.line-field span {
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.line-field input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  border-bottom: 2px solid #2d2d2d;
+  border-radius: 0;
+  background: transparent;
+  color: #111;
+  padding: 0 2px 1px;
+  box-shadow: none;
+}
+
+.line-field--wide {
+  grid-column: span 2;
+}
+
+.skills-header,
+.proficiencies-header,
+.weapons-header {
+  display: grid;
+  gap: 10px;
+  font-size: 12px;
+  align-items: end;
+  margin-bottom: 4px;
+}
+
+.skills-header {
+  grid-template-columns: 1fr 44px 1fr 44px;
+}
+
+.skills-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.skills-col {
+  min-height: 220px;
+}
+
+.skill-line {
+  display: grid;
+  grid-template-columns: 1fr 44px auto;
+  gap: 8px;
+  align-items: end;
+  min-height: 22px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.skill-line__name,
+.skill-line__percent {
+  padding-bottom: 2px;
+}
+
+.skill-line__actions,
+.equipment-line__actions {
+  display: flex;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.skills-add-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+.skills-add-row button,
+.combat-roll-buttons button,
+.tmntos-roll-pill {
+  border: 1px solid #2d2d2d;
+  background: #f6f4ee;
+  color: #111;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.combat-roll-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: -2px;
+  margin-bottom: 4px;
+}
+
+.tmntos-actions-reactions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.tmntos-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tmntos-sublist label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.equipment-box {
+  min-height: 150px;
+}
+
+.equipment-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: end;
+  min-height: 22px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.equipment-line__name {
+  padding-bottom: 2px;
+}
+
+.proficiencies-header {
+  grid-template-columns: 1.5fr 1fr 1fr 0.75fr;
+}
+
+.proficiency-line {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 0.75fr;
+  gap: 10px;
+  min-height: 22px;
+  align-items: end;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #2d2d2d;
+  padding-bottom: 2px;
+}
+
+.weapons-box {
+  min-height: 210px;
+}
+
+.weapons-header {
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.4fr;
+}
+
+.weapon-line {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.4fr;
+  gap: 10px;
+  min-height: 22px;
+  align-items: end;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #2d2d2d;
+  padding-bottom: 2px;
+}
+
+.weapon-line__notes {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-img {
+  display: none;
+}
+
+.editor {
+  min-height: 120px;
+}
+
+/* Page 2 */
+
+.tmntos-page--second {
+  gap: 16px;
+}
+
+.tmntos-page2-top {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 14px;
+}
+
+.tmntos-page2-left,
+.tmntos-page2-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tmntos-page2-box {
+  padding-top: 12px;
+}
+
+.tmntos-page2-traits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.tmntos-page2-checkgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.tmntos-checkline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.tmntos-page2-editor-wrap,
+.tmntos-page3-editor-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tmntos-area-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tmntos-page2-bonus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tmntos-page2-magic-top {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tmntos-page2-save-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.tmntos-powers-box {
+  min-height: 720px;
+}
+
+.tmntos-page2-powers-header {
+  display: grid;
+  grid-template-columns: 1.25fr 0.65fr 0.8fr 0.75fr 1.55fr;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.tmntos-page2-power-row {
+  display: grid;
+  grid-template-columns: 1.25fr 0.65fr 0.8fr 0.75fr 1.55fr;
+  gap: 10px;
+  align-items: start;
+  min-height: 60px;
+  padding: 6px 0;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.tmntos-page2-power-name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tmntos-page2-power-title {
+  font-weight: 800;
+}
+
+.tmntos-page2-power-meta {
+  font-size: 11px;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+.tmntos-page2-power-effect {
+  min-height: 40px;
+}
+
+.tmntos-page2-power-effect p {
+  margin: 0;
+}
+
+/* Page 3 */
+
+.tmntos-page--third {
+  gap: 16px;
+}
+
+.tmntos-page3-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.tmntos-page3-title {
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tmntos-page3-subtitle {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tmntos-page3-top {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 14px;
+}
+
+.tmntos-page3-left,
+.tmntos-page3-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tmntos-page3-box {
+  padding-top: 12px;
+}
+
+.tmntos-page3-note-inline {
+  margin-top: 6px;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.tmntos-page3-human-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr;
+  gap: 8px 10px;
+  align-items: center;
+}
+
+.tmntos-page3-human-grid input {
+  border: 0;
+  border-bottom: 2px solid #2d2d2d;
+  border-radius: 0;
+  background: transparent;
+  color: #111;
+  padding: 0 2px 1px;
+  box-shadow: none;
+}
+
+.tmntos-page3-human-head {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.tmntos-page3-human-label {
+  font-weight: 700;
+}
+
+.tmntos-page3-powerlist {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.tmntos-page3-summary-box {
+  min-height: 120px;
+}
+
+.tmntos-page3-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.tmntos-page3-summary-note {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .tmntos-page__top,
+  .tmntos-page__bottom,
+  .skills-columns,
+  .tmntos-actions-reactions,
+  .attribute-row,
+  .speed-grid,
+  .skills-header,
+  .proficiencies-header,
+  .weapons-header,
+  .proficiency-line,
+  .weapon-line,
+  .tmntos-page2-top,
+  .tmntos-page2-traits-grid,
+  .tmntos-page2-checkgrid,
+  .tmntos-page2-magic-top,
+  .tmntos-page2-save-row,
+  .tmntos-page2-powers-header,
+  .tmntos-page2-power-row,
+  .tmntos-page3-top,
+  .tmntos-page3-human-grid,
+  .tmntos-page3-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .combat-inline,
+  .combat-inline--five,
+  .tmntos-inline-3,
+  .tmntos-inline-4 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "tmntos",
+  "title": "TMNTOS Redux",
+  "description": "Teenage Mutant Ninja Turtles & Other Strangeness system for Foundry VTT.",
+  "version": "0.1.0",
+  "background": "systems/tmntos/images/system-icon.png",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "Belor McKraken"
+    }
+  ],
+  "esmodules": ["tmntos.mjs"],
+  "styles": ["styles/tmntos.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {}
+    },
+    "Item": {
+      "weapon": {},
+      "skill": {},
+      "proficiency": {},
+      "power": {},
+      "equipment": {}
+    }
+  },
+  "initiative": "1d20 + @combat.initiative",
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
+  "primaryTokenAttribute": "resources.hp",
+  "secondaryTokenAttribute": "resources.sdc",
+  "socket": false
+}
