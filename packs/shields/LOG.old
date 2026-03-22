@@ -1,0 +1,5 @@
+2026/03/21-22:51:18.388 38dc Recovering log #25
+2026/03/21-22:51:18.388 38dc Level-0 table #27: started
+2026/03/21-22:51:18.395 38dc Level-0 table #27: 1768 bytes OK
+2026/03/21-22:51:18.401 38dc Delete type=0 #25
+2026/03/21-22:51:18.401 38dc Delete type=3 #24

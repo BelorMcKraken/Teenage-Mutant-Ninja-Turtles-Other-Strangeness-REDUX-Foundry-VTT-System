@@ -1,4 +1,5 @@
 .tmntos.character-sheet .window-content,
+.tmntos-sheet-tabs,
 .tmntos-page1-sheet {
   background: #e9e7e1;
   color: #111;
@@ -8,13 +9,53 @@
   padding: 0;
 }
 
+.tmntos-sheet-tabs,
 .tmntos-page1-sheet {
   min-height: 100%;
-  padding: 12px;
   font-family: "Signika", sans-serif;
   font-size: 13px;
   line-height: 1.15;
 }
+
+.tmntos-page1-sheet {
+  padding: 12px;
+}
+
+/* Tabs */
+
+.tmntos-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px 0;
+  border-bottom: 2px solid #2d2d2d;
+}
+
+.tmntos-tabs .item {
+  padding: 6px 12px;
+  border: 2px solid #2d2d2d;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background: #d9d5ca;
+  font-weight: 800;
+}
+
+.tmntos-tabs .item.active {
+  background: #f6f4ee;
+}
+
+.tmntos-tab-panels {
+  padding: 12px;
+}
+
+.tmntos-tab-panels .tab {
+  display: none;
+}
+
+.tmntos-tab-panels .tab.active {
+  display: block;
+}
+
+/* Shared page layout */
 
 .tmntos-page {
   max-width: 1120px;
@@ -235,7 +276,8 @@
 }
 
 .skill-line__actions,
-.equipment-line__actions {
+.equipment-line__actions,
+.tmntos-item-row__actions {
   display: flex;
   gap: 6px;
   font-size: 11px;
@@ -244,6 +286,7 @@
 .skills-add-row {
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
   margin-top: 6px;
 }
 
@@ -579,6 +622,171 @@
   text-align: center;
 }
 
+/* Inventory */
+
+.tmntos-page--inventory {
+  gap: 16px;
+}
+
+.tmntos-inventory-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.tmntos-item-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr auto;
+  gap: 8px;
+  align-items: end;
+  min-height: 24px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #2d2d2d;
+  padding-bottom: 2px;
+}
+
+.tmntos-item-row--actions {
+  align-items: center;
+}
+
+.tmntos-item-row__actions {
+  flex-wrap: wrap;
+}
+
+.tmntos-item-row__actions button,
+.skill-line__actions button,
+.equipment-line__actions button {
+  border: 1px solid #2d2d2d;
+  background: #f6f4ee;
+  color: #111;
+  border-radius: 6px;
+  font-size: 11px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.tmntos-item-row__name {
+  font-weight: 700;
+}
+
+/* Item sheets */
+
+.tmntos-item-sheet {
+  min-height: 100%;
+  padding: 12px;
+  background: #e9e7e1;
+  color: #111;
+  font-family: "Signika", sans-serif;
+}
+
+.tmntos-item-header {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.tmntos-item-header__img {
+  border: 2px solid #2d2d2d;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.tmntos-item-header__main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tmntos-item-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #2d2d2d;
+}
+
+.tmntos-item-tabs .item {
+  padding: 6px 12px;
+  border: 2px solid #2d2d2d;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background: #d9d5ca;
+  font-weight: 800;
+}
+
+.tmntos-item-tabs .item.active {
+  background: #f6f4ee;
+}
+
+.tmntos-item-tab-panels .tab {
+  display: none;
+}
+
+.tmntos-item-tab-panels .tab.active {
+  display: block;
+}
+
+.tmntos-item-sheet select {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  border-bottom: 2px solid #2d2d2d;
+  border-radius: 0;
+  background: transparent;
+  color: #111;
+  padding: 0 2px 1px;
+  box-shadow: none;
+}
+
+/* Chat cards */
+
+.tmntos-chat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 2px solid #2d2d2d;
+  border-radius: 10px;
+  background: #f6f4ee;
+}
+
+.tmntos-chat-card__title {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.tmntos-chat-card__subtitle {
+  font-size: 12px;
+  opacity: 0.85;
+  text-transform: uppercase;
+}
+
+.tmntos-chat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tmntos-chat-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid #2d2d2d;
+  border-radius: 999px;
+  font-size: 11px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.tmntos-chat-card--crit {
+  border-color: #2ecc71;
+  background: #eafaf1;
+}
+
+.tmntos-chat-card--fail {
+  border-color: #e74c3c;
+  background: #fdecea;
+}
+
 @media (max-width: 1100px) {
   .tmntos-page__top,
   .tmntos-page__bottom,
@@ -600,7 +808,10 @@
   .tmntos-page2-power-row,
   .tmntos-page3-top,
   .tmntos-page3-human-grid,
-  .tmntos-page3-summary-grid {
+  .tmntos-page3-summary-grid,
+  .tmntos-inventory-grid,
+  .tmntos-item-row,
+  .tmntos-item-header {
     grid-template-columns: 1fr;
   }
 

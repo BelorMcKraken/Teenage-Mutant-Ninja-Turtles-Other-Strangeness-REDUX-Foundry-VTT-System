@@ -10,8 +10,7 @@
   },
   "authors": [
     {
-      "name": "Belor McKraken",
-      "url": "https://github.com/BelorMcKraken/Teenage-Mutant-Ninja-Turtles-Other-Strangeness-REDUX-Foundry-VTT-System/tree/main"
+      "name": "Belor McKraken"
     }
   ],
   "esmodules": ["tmntos.mjs"],
@@ -29,12 +28,80 @@
     },
     "Item": {
       "weapon": {},
+      "armor": {},
+      "shield": {},
       "skill": {},
       "proficiency": {},
       "power": {},
-      "equipment": {}
+      "spell": {},
+      "equipment": {},
+      "animal": {},
+      "vehicle": {},
+      "feature": {}
     }
   },
+  "packs": [
+    {
+      "name": "animals",
+      "label": "TMNTOS Animals",
+      "type": "Item",
+      "path": "packs/animals"
+    },
+    {
+      "name": "human-features",
+      "label": "TMNTOS Human Features",
+      "type": "Item",
+      "path": "packs/human-features"
+    },
+    {
+      "name": "skills",
+      "label": "TMNTOS Skills",
+      "type": "Item",
+      "path": "packs/skills"
+    },
+    {
+      "name": "gear",
+      "label": "TMNTOS Gear",
+      "type": "Item",
+      "path": "packs/gear"
+    },
+    {
+      "name": "weapons",
+      "label": "TMNTOS Weapons",
+      "type": "Item",
+      "path": "packs/weapons"
+    },
+    {
+      "name": "armor",
+      "label": "TMNTOS Armor",
+      "type": "Item",
+      "path": "packs/armor"
+    },
+    {
+      "name": "shields",
+      "label": "TMNTOS Shields",
+      "type": "Item",
+      "path": "packs/shields"
+    },
+    {
+      "name": "psionics",
+      "label": "TMNTOS Psionics",
+      "type": "Item",
+      "path": "packs/psionics"
+    },
+    {
+      "name": "spells",
+      "label": "TMNTOS Spells",
+      "type": "Item",
+      "path": "packs/spells"
+    },
+    {
+      "name": "vehicles",
+      "label": "TMNTOS Vehicles",
+      "type": "Item",
+      "path": "packs/vehicles"
+    }
+  ],
   "initiative": "1d20 + @combat.initiative",
   "grid": {
     "distance": 5,
@@ -42,9 +109,5 @@
   },
   "primaryTokenAttribute": "resources.hp",
   "secondaryTokenAttribute": "resources.sdc",
-  "url": "https://github.com/BelorMcKraken/Teenage-Mutant-Ninja-Turtles-Other-Strangeness-REDUX-Foundry-VTT-System/tree/main",
-  "mainifest": "https://github.com/BelorMcKraken/Teenage-Mutant-Ninja-Turtles-Other-Strangeness-REDUX-Foundry-VTT-System/blob/main/system.json",
-  "download": "https://github.com/BelorMcKraken/Teenage-Mutant-Ninja-Turtles-Other-Strangeness-REDUX-Foundry-VTT-System/tree/main",
- 
   "socket": false
 }

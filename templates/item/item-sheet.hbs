@@ -1,0 +1,272 @@
+<form class="tmntos-item-sheet" autocomplete="off">
+  <header class="tmntos-item-header">
+    <img
+      class="tmntos-item-header__img"
+      src="{{item.img}}"
+      data-edit="img"
+      title="{{item.name}}"
+      width="72"
+      height="72"
+    />
+
+    <div class="tmntos-item-header__main">
+      <label class="line-field">
+        <span>Name</span>
+        <input type="text" name="name" value="{{item.name}}" />
+      </label>
+
+      <label class="line-field">
+        <span>Type</span>
+        <input type="text" value="{{itemType}}" disabled />
+      </label>
+    </div>
+  </header>
+
+  <nav class="tmntos-item-tabs tabs" data-group="primary">
+    <a class="item" data-tab="details">Details</a>
+    <a class="item" data-tab="description">Description</a>
+  </nav>
+
+  <section class="tmntos-item-tab-panels">
+    <div class="tab" data-group="primary" data-tab="details">
+      {{#if isWeapon}}
+        <section class="tmntos-box">
+          <div class="tmntos-panel-title">Weapon</div>
+
+          <label class="line-field">
+            <span>Damage</span>
+            <input type="text" name="system.damage" value="{{system.damage}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Range</span>
+            <input type="text" name="system.range" value="{{system.range}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Proficiency</span>
+            <input type="text" name="system.proficiency" value="{{system.proficiency}}" />
+          </label>
+
+          <label class="tmntos-checkline">
+            <input type="checkbox" name="system.isNatural" {{checked system.isNatural}} />
+            Natural Weapon
+          </label>
+        </section>
+      {{/if}}
+
+      {{#if isArmor}}
+        <section class="tmntos-box">
+          <div class="tmntos-panel-title">Armor</div>
+
+          <label class="line-field">
+            <span>Cost</span>
+            <input type="text" name="system.cost" value="{{system.cost}}" />
+          </label>
+
+          <label class="line-field">
+            <span>AR</span>
+            <input type="number" name="system.ar" value="{{system.ar}}" />
+          </label>
+
+          <label class="line-field">
+            <span>SDC</span>
+            <input type="number" name="system.sdc" value="{{system.sdc}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Weight</span>
+            <input type="text" name="system.weight" value="{{system.weight}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Details</span>
+            <input type="text" name="system.details" value="{{system.details}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Properties</span>
+            <input type="text" name="system.properties" value="{{system.properties}}" />
+          </label>
+
+          <label class="tmntos-checkline">
+            <input type="checkbox" name="system.equipped" {{checked system.equipped}} />
+            Equipped
+          </label>
+        </section>
+      {{/if}}
+
+      {{#if isShield}}
+        <section class="tmntos-box">
+          <div class="tmntos-panel-title">Shield</div>
+
+          <label class="line-field">
+            <span>Cost</span>
+            <input type="text" name="system.cost" value="{{system.cost}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Parry</span>
+            <input type="number" name="system.parry" value="{{system.parry}}" />
+          </label>
+
+          <label class="line-field">
+            <span>SDC</span>
+            <input type="number" name="system.sdc" value="{{system.sdc}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Weight</span>
+            <input type="text" name="system.weight" value="{{system.weight}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Details</span>
+            <input type="text" name="system.details" value="{{system.details}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Properties</span>
+            <input type="text" name="system.properties" value="{{system.properties}}" />
+          </label>
+
+          <label class="tmntos-checkline">
+            <input type="checkbox" name="system.equipped" {{checked system.equipped}} />
+            Equipped
+          </label>
+        </section>
+      {{/if}}
+
+      {{#if isSkill}}
+        <section class="tmntos-box">
+          <div class="tmntos-panel-title">Skill</div>
+
+          <label class="line-field">
+            <span>Category</span>
+            <select name="system.category">
+              <option value="professional" {{#if (eq system.category "professional")}}selected{{/if}}>professional</option>
+              <option value="amateur" {{#if (eq system.category "amateur")}}selected{{/if}}>amateur</option>
+            </select>
+          </label>
+
+          <label class="line-field">
+            <span>Percent</span>
+            <input type="number" name="system.percent" value="{{system.percent}}" />
+          </label>
+        </section>
+      {{/if}}
+
+      {{#if isProficiency}}
+        <section class="tmntos-box">
+          <div class="tmntos-panel-title">Weapon Proficiency</div>
+
+          <label class="line-field">
+            <span>Ranged Strike</span>
+            <input type="number" name="system.rangedStrike" value="{{system.rangedStrike}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Melee Strike</span>
+            <input type="number" name="system.meleeStrike" value="{{system.meleeStrike}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Parry</span>
+            <input type="number" name="system.parry" value="{{system.parry}}" />
+          </label>
+        </section>
+      {{/if}}
+
+      {{#if isPower}}
+        <section class="tmntos-box">
+          <div class="tmntos-panel-title">Psionic Power</div>
+
+          <label class="line-field">
+            <span>Category</span>
+            <select name="system.category">
+              <option value="psionic" {{#if (eq system.category "psionic")}}selected{{/if}}>psionic</option>
+              <option value="mutation" {{#if (eq system.category "mutation")}}selected{{/if}}>mutation</option>
+              <option value="other" {{#if (eq system.category "other")}}selected{{/if}}>other</option>
+            </select>
+          </label>
+
+          <label class="line-field">
+            <span>Bio-E Cost</span>
+            <input type="number" name="system.bioECost" value="{{system.bioECost}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Range</span>
+            <input type="text" name="system.range" value="{{system.range}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Saving Throw</span>
+            <input type="text" name="system.savingThrow" value="{{system.savingThrow}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Duration</span>
+            <input type="text" name="system.duration" value="{{system.duration}}" />
+          </label>
+        </section>
+      {{/if}}
+
+      {{#if isSpell}}
+        <section class="tmntos-box">
+          <div class="tmntos-panel-title">Spell</div>
+
+          <label class="line-field">
+            <span>Range</span>
+            <input type="text" name="system.range" value="{{system.range}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Saving Throw</span>
+            <input type="text" name="system.savingThrow" value="{{system.savingThrow}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Duration</span>
+            <input type="text" name="system.duration" value="{{system.duration}}" />
+          </label>
+        </section>
+      {{/if}}
+
+      {{#if isEquipment}}
+        <section class="tmntos-box">
+          <div class="tmntos-panel-title">Gear</div>
+
+          <label class="line-field">
+            <span>Quantity</span>
+            <input type="number" name="system.quantity" value="{{system.quantity}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Weight</span>
+            <input type="number" step="any" name="system.weight" value="{{system.weight}}" />
+          </label>
+
+          <label class="line-field">
+            <span>Value</span>
+            <input type="number" name="system.value" value="{{system.value}}" />
+          </label>
+        </section>
+      {{/if}}
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="description">
+      <section class="tmntos-box">
+        <div class="tmntos-panel-title">Description / Notes</div>
+
+        {{#if isPower}}
+          {{editor system.effect target="system.effect" button=true editable=@root.editable engine="prosemirror"}}
+        {{else if isSpell}}
+          {{editor system.effect target="system.effect" button=true editable=@root.editable engine="prosemirror"}}
+        {{else}}
+          {{editor system.notes target="system.notes" button=true editable=@root.editable engine="prosemirror"}}
+        {{/if}}
+      </section>
+    </div>
+  </section>
+</form>

@@ -1,460 +1,805 @@
-<form class="{{cssClass}} tmntos-page1-sheet" autocomplete="off">
-  <section class="tmntos-page">
-    <div class="tmntos-page__top">
-      <div class="tmntos-left-col">
-        <section class="tmntos-logo-block">
-          <div class="tmntos-logo-title">
-            <div class="tmntos-logo-small">TEENAGE MUTANT NINJA</div>
-            <div class="tmntos-logo-big">TURTLES</div>
-            <div class="tmntos-logo-sub">&amp; OTHER STRANGENESS</div>
-          </div>
-        </section>
+<form class="{{cssClass}} tmntos-sheet-tabs" autocomplete="off">
+  <nav class="tmntos-tabs tabs" data-group="primary">
+    <a class="item" data-tab="core">Core</a>
+    <a class="item" data-tab="mutations">Mutations</a>
+    <a class="item" data-tab="bioe">Bio-E</a>
+    <a class="item" data-tab="inventory">Inventory</a>
+  </nav>
 
-        <section class="tmntos-identity-block">
-          <label class="line-field">
-            <span>Name</span>
-            <input type="text" name="name" value="{{actor.name}}" />
-          </label>
-          <label class="line-field">
-            <span>Animal</span>
-            <input type="text" name="system.identity.animal" value="{{system.identity.animal}}" />
-          </label>
-          <label class="line-field">
-            <span>Alignment</span>
-            <input type="text" name="system.identity.alignment" value="{{system.identity.alignment}}" />
-          </label>
-          <label class="line-field">
-            <span>Disposition</span>
-            <input type="text" name="system.identity.disposition" value="{{system.identity.disposition}}" />
-          </label>
+  <section class="tmntos-tab-panels">
+    <div class="tab" data-group="primary" data-tab="core">
+      <section class="tmntos-page">
+        <div class="tmntos-page__top">
+          <div class="tmntos-left-col">
+            <section class="tmntos-logo-block">
+              <div class="tmntos-logo-title">
+                <div class="tmntos-logo-small">TEENAGE MUTANT NINJA</div>
+                <div class="tmntos-logo-big">TURTLES</div>
+                <div class="tmntos-logo-sub">&amp; OTHER STRANGENESS</div>
+              </div>
+            </section>
 
-          <div class="tmntos-inline-3">
-            <label class="line-field">
-              <span>Age</span>
-              <input type="number" name="system.identity.age" value="{{system.identity.age}}" />
-            </label>
-            <label class="line-field">
-              <span>Gender</span>
-              <input type="text" name="system.identity.gender" value="{{system.identity.gender}}" />
-            </label>
-          </div>
+            <section class="tmntos-identity-block">
+              <label class="line-field">
+                <span>Name</span>
+                <input type="text" name="name" value="{{actor.name}}" />
+              </label>
+              <label class="line-field">
+                <span>Animal</span>
+                <input type="text" name="system.identity.animal" value="{{system.identity.animal}}" />
+              </label>
+              <label class="line-field">
+                <span>Alignment</span>
+                <input type="text" name="system.identity.alignment" value="{{system.identity.alignment}}" />
+              </label>
+              <label class="line-field">
+                <span>Disposition</span>
+                <input type="text" name="system.identity.disposition" value="{{system.identity.disposition}}" />
+              </label>
 
-          <div class="tmntos-inline-4">
-            <label class="line-field">
-              <span>Wt</span>
-              <input type="text" name="system.identity.weight" value="{{system.identity.weight}}" />
-            </label>
-            <label class="line-field">
-              <span>Ht</span>
-              <input type="text" name="system.identity.height" value="{{system.identity.height}}" />
-            </label>
-            <label class="line-field">
-              <span>Size</span>
-              <input type="text" name="system.identity.size" value="{{system.identity.size}}" />
-            </label>
-          </div>
+              <div class="tmntos-inline-3">
+                <label class="line-field">
+                  <span>Age</span>
+                  <input type="number" name="system.identity.age" value="{{system.identity.age}}" />
+                </label>
+                <label class="line-field">
+                  <span>Gender</span>
+                  <input type="text" name="system.identity.gender" value="{{system.identity.gender}}" />
+                </label>
+              </div>
 
-          <div class="tmntos-inline-3">
-            <label class="line-field">
-              <span>XP</span>
-              <input type="number" name="system.identity.xp" value="{{system.identity.xp}}" />
-            </label>
-            <label class="line-field">
-              <span>Level</span>
-              <input type="number" name="system.identity.level" value="{{system.identity.level}}" />
-            </label>
-          </div>
+              <div class="tmntos-inline-4">
+                <label class="line-field">
+                  <span>Wt</span>
+                  <input type="text" name="system.identity.weight" value="{{system.identity.weight}}" />
+                </label>
+                <label class="line-field">
+                  <span>Ht</span>
+                  <input type="text" name="system.identity.height" value="{{system.identity.height}}" />
+                </label>
+                <label class="line-field">
+                  <span>Size</span>
+                  <input type="text" name="system.identity.size" value="{{system.identity.size}}" />
+                </label>
+              </div>
 
-          <div class="tmntos-inline-3">
-            <label class="line-field">
-              <span>Hit Points</span>
-              <input type="number" name="system.resources.hp.value" value="{{system.resources.hp.value}}" />
-            </label>
-            <label class="line-field">
-              <span>SDC</span>
-              <input type="number" name="system.resources.sdc.value" value="{{system.resources.sdc.value}}" />
-            </label>
-          </div>
-        </section>
+              <div class="tmntos-inline-3">
+                <label class="line-field">
+                  <span>XP</span>
+                  <input type="number" name="system.identity.xp" value="{{system.identity.xp}}" />
+                </label>
+                <label class="line-field">
+                  <span>Level</span>
+                  <input type="number" name="system.identity.level" value="{{system.identity.level}}" />
+                </label>
+              </div>
 
-        <section class="tmntos-box armor-box">
-          <div class="tmntos-box__title">ARMOR</div>
-          <div class="tmntos-inline-4">
-            <label class="line-field">
-              <span>AR</span>
-              <input type="number" name="system.armor.ar" value="{{system.armor.ar}}" />
-            </label>
-            <label class="line-field line-field--wide">
-              <span>SDC</span>
-              <input type="number" name="system.armor.sdc" value="{{system.armor.sdc}}" />
-            </label>
-            <label class="line-field">
-              <span>WT</span>
-              <input type="text" name="system.armor.weight" value="{{system.armor.weight}}" />
-            </label>
-          </div>
-          <label class="line-field">
-            <span>Properties</span>
-            <input type="text" name="system.armor.properties" value="{{system.armor.properties}}" />
-          </label>
-          <label class="line-field">
-            <span>&nbsp;</span>
-            <input type="text" name="system.armor.name" value="{{system.armor.name}}" />
-          </label>
-        </section>
-      </div>
+              <div class="tmntos-inline-3">
+                <label class="line-field">
+                  <span>Hit Points</span>
+                  <input type="number" name="system.resources.hp.value" value="{{system.resources.hp.value}}" />
+                </label>
+                <label class="line-field">
+                  <span>SDC</span>
+                  <input type="number" name="system.resources.sdc.value" value="{{system.resources.sdc.value}}" />
+                </label>
+              </div>
+            </section>
 
-      <div class="tmntos-right-col">
-        <section class="tmntos-box mental-box">
-          <div class="tmntos-panel-title">MENTAL ATTRIBUTES</div>
-
-          <div class="attribute-row">
-            <label class="line-field">
-              <span>Intelligence (IQ)</span>
-              <input type="number" name="system.attributes.iq" value="{{system.attributes.iq}}" />
-            </label>
-            <label class="line-field">
-              <span>Bonus to All Skills</span>
-              <input type="number" name="system.bonuses.allSkills" value="{{system.bonuses.allSkills}}" />
-            </label>
+            <section class="tmntos-box armor-box">
+              <div class="tmntos-box__title">ARMOR</div>
+              <div class="tmntos-inline-4">
+                <label class="line-field">
+                  <span>AR</span>
+                  <input type="number" name="system.armor.ar" value="{{system.armor.ar}}" />
+                </label>
+                <label class="line-field line-field--wide">
+                  <span>SDC</span>
+                  <input type="number" name="system.armor.sdc" value="{{system.armor.sdc}}" />
+                </label>
+                <label class="line-field">
+                  <span>WT</span>
+                  <input type="text" name="system.armor.weight" value="{{system.armor.weight}}" />
+                </label>
+              </div>
+              <label class="line-field">
+                <span>Properties</span>
+                <input type="text" name="system.armor.properties" value="{{system.armor.properties}}" />
+              </label>
+              <label class="line-field">
+                <span>&nbsp;</span>
+                <input type="text" name="system.armor.name" value="{{system.armor.name}}" />
+              </label>
+            </section>
           </div>
 
-          <div class="attribute-row">
-            <label class="line-field">
-              <span>Endurance (ME)</span>
-              <input type="number" name="system.attributes.me" value="{{system.attributes.me}}" />
-            </label>
-            <label class="line-field">
-              <span>Save vs Psionics</span>
-              <input type="number" name="system.bonuses.saveVsPsionics" value="{{system.bonuses.saveVsPsionics}}" />
-            </label>
-          </div>
+          <div class="tmntos-right-col">
+            <section class="tmntos-box mental-box">
+              <div class="tmntos-panel-title">MENTAL ATTRIBUTES</div>
 
-          <div class="attribute-row">
-            <label class="line-field">
-              <span>Affinity (MA)</span>
-              <input type="number" name="system.attributes.ma" value="{{system.attributes.ma}}" />
-            </label>
-            <label class="line-field">
-              <span>Charisma &amp; Trust</span>
-              <input type="number" name="system.bonuses.charismaTrust" value="{{system.bonuses.charismaTrust}}" />
-            </label>
-          </div>
+              <div class="attribute-row">
+                <label class="line-field">
+                  <span>Intelligence (IQ)</span>
+                  <input type="number" name="system.attributes.iq" value="{{system.attributes.iq}}" />
+                </label>
+                <label class="line-field">
+                  <span>Bonus to All Skills</span>
+                  <input type="number" name="system.bonuses.allSkills" value="{{system.bonuses.allSkills}}" />
+                </label>
+              </div>
 
-          <div class="tmntos-panel-title tmntos-panel-title--sub">PHYSICAL ATTRIBUTES</div>
+              <div class="attribute-row">
+                <label class="line-field">
+                  <span>Endurance (ME)</span>
+                  <input type="number" name="system.attributes.me" value="{{system.attributes.me}}" />
+                </label>
+                <label class="line-field">
+                  <span>Save vs Psionics</span>
+                  <input type="number" name="system.bonuses.saveVsPsionics" value="{{system.bonuses.saveVsPsionics}}" />
+                </label>
+              </div>
 
-          <div class="attribute-row">
-            <label class="line-field">
-              <span>Strength (PS)</span>
-              <input type="number" name="system.attributes.ps" value="{{system.attributes.ps}}" />
-            </label>
-            <label class="line-field">
-              <span>Bonus to Melee &amp; Hurled Damage</span>
-              <input type="number" name="system.bonuses.meleeHurledDamage" value="{{system.bonuses.meleeHurledDamage}}" />
-            </label>
-          </div>
+              <div class="attribute-row">
+                <label class="line-field">
+                  <span>Affinity (MA)</span>
+                  <input type="number" name="system.attributes.ma" value="{{system.attributes.ma}}" />
+                </label>
+                <label class="line-field">
+                  <span>Charisma &amp; Trust</span>
+                  <input type="number" name="system.bonuses.charismaTrust" value="{{system.bonuses.charismaTrust}}" />
+                </label>
+              </div>
 
-          <div class="attribute-row">
-            <label class="line-field">
-              <span>Prowess (PP)</span>
-              <input type="number" name="system.attributes.pp" value="{{system.attributes.pp}}" />
-            </label>
-            <label class="line-field">
-              <span>Bonus to Strike, Parry, Dodge</span>
-              <input type="number" name="system.bonuses.strikeParryDodge" value="{{system.bonuses.strikeParryDodge}}" />
-            </label>
-          </div>
+              <div class="tmntos-panel-title tmntos-panel-title--sub">PHYSICAL ATTRIBUTES</div>
 
-          <div class="attribute-row">
-            <label class="line-field">
-              <span>Endurance (PE)</span>
-              <input type="number" name="system.attributes.pe" value="{{system.attributes.pe}}" />
-            </label>
-            <label class="line-field">
-              <span>Save vs Coma, Toxin, Magic</span>
-              <input type="number" name="system.bonuses.saveVsComaToxinMagic" value="{{system.bonuses.saveVsComaToxinMagic}}" />
-            </label>
-          </div>
+              <div class="attribute-row">
+                <label class="line-field">
+                  <span>Strength (PS)</span>
+                  <input type="number" name="system.attributes.ps" value="{{system.attributes.ps}}" />
+                </label>
+                <label class="line-field">
+                  <span>Bonus to Melee &amp; Hurled Damage</span>
+                  <input type="number" name="system.bonuses.meleeHurledDamage" value="{{system.bonuses.meleeHurledDamage}}" />
+                </label>
+              </div>
 
-          <div class="attribute-row">
-            <label class="line-field">
-              <span>Beauty (PB)</span>
-              <input type="number" name="system.attributes.pb" value="{{system.attributes.pb}}" />
-            </label>
-            <label class="line-field">
-              <span>Charm &amp; Impress</span>
-              <input type="number" name="system.bonuses.charmImpress" value="{{system.bonuses.charmImpress}}" />
-            </label>
-          </div>
+              <div class="attribute-row">
+                <label class="line-field">
+                  <span>Prowess (PP)</span>
+                  <input type="number" name="system.attributes.pp" value="{{system.attributes.pp}}" />
+                </label>
+                <label class="line-field">
+                  <span>Bonus to Strike, Parry, Dodge</span>
+                  <input type="number" name="system.bonuses.strikeParryDodge" value="{{system.bonuses.strikeParryDodge}}" />
+                </label>
+              </div>
 
-          <div class="speed-grid">
-            <label class="line-field">
-              <span>Speed</span>
-              <input type="number" name="system.attributes.spd" value="{{system.attributes.spd}}" />
-            </label>
-            <label class="line-field">
-              <span>Move Action</span>
-              <input type="number" name="system.movement.moveAction" value="{{system.movement.moveAction}}" />
-            </label>
-            <label class="line-field">
-              <span>Full Round</span>
-              <input type="number" name="system.movement.fullRound" value="{{system.movement.fullRound}}" />
-            </label>
-            <label class="line-field">
-              <span>Minute Sprint</span>
-              <input type="number" name="system.movement.minuteSprint" value="{{system.movement.minuteSprint}}" />
-            </label>
-          </div>
+              <div class="attribute-row">
+                <label class="line-field">
+                  <span>Endurance (PE)</span>
+                  <input type="number" name="system.attributes.pe" value="{{system.attributes.pe}}" />
+                </label>
+                <label class="line-field">
+                  <span>Save vs Coma, Toxin, Magic</span>
+                  <input type="number" name="system.bonuses.saveVsComaToxinMagic" value="{{system.bonuses.saveVsComaToxinMagic}}" />
+                </label>
+              </div>
 
-          <div class="speed-grid speed-grid--bottom">
-            <label class="line-field">
-              <span>Yards/Meters</span>
-              <input type="number" name="system.movement.yardsMeters" value="{{system.movement.yardsMeters}}" />
-            </label>
-            <label class="line-field">
-              <span>Tabletop Inches</span>
-              <input type="number" name="system.movement.tabletopInches" value="{{system.movement.tabletopInches}}" />
-            </label>
-            <div></div>
-            <div></div>
-          </div>
-        </section>
-      </div>
-    </div>
+              <div class="attribute-row">
+                <label class="line-field">
+                  <span>Beauty (PB)</span>
+                  <input type="number" name="system.attributes.pb" value="{{system.attributes.pb}}" />
+                </label>
+                <label class="line-field">
+                  <span>Charm &amp; Impress</span>
+                  <input type="number" name="system.bonuses.charmImpress" value="{{system.bonuses.charmImpress}}" />
+                </label>
+              </div>
 
-    <div class="tmntos-page__middle">
-      <div class="skills-block">
-        <div class="skills-header">
-          <div>PROFESSIONAL Skills</div>
-          <div>%</div>
-          <div>AMATEUR Skills</div>
-          <div>%</div>
-        </div>
+              <div class="speed-grid">
+                <label class="line-field">
+                  <span>Speed</span>
+                  <input type="number" name="system.attributes.spd" value="{{system.attributes.spd}}" />
+                </label>
+                <label class="line-field">
+                  <span>Move Action</span>
+                  <input type="number" name="system.movement.moveAction" value="{{system.movement.moveAction}}" />
+                </label>
+                <label class="line-field">
+                  <span>Full Round</span>
+                  <input type="number" name="system.movement.fullRound" value="{{system.movement.fullRound}}" />
+                </label>
+                <label class="line-field">
+                  <span>Minute Sprint</span>
+                  <input type="number" name="system.movement.minuteSprint" value="{{system.movement.minuteSprint}}" />
+                </label>
+              </div>
 
-        <div class="skills-columns">
-          <div class="skills-col">
-            {{#each items.skills as |item|}}
-              {{#if (eq item.system.category "professional")}}
-                <div class="skill-line" data-item-id="{{item.id}}">
-                  <div class="skill-line__name">{{item.name}}</div>
-                  <div class="skill-line__percent">{{item.system.percent}}</div>
-                  <div class="skill-line__actions">
-                    <a data-action="roll-skill">Roll</a>
-                    <a data-action="item-edit">Edit</a>
-                    <a data-action="item-delete">X</a>
-                  </div>
-                </div>
-              {{/if}}
-            {{/each}}
-          </div>
-
-          <div class="skills-col">
-            {{#each items.skills as |item|}}
-              {{#if (eq item.system.category "amateur")}}
-                <div class="skill-line" data-item-id="{{item.id}}">
-                  <div class="skill-line__name">{{item.name}}</div>
-                  <div class="skill-line__percent">{{item.system.percent}}</div>
-                  <div class="skill-line__actions">
-                    <a data-action="roll-skill">Roll</a>
-                    <a data-action="item-edit">Edit</a>
-                    <a data-action="item-delete">X</a>
-                  </div>
-                </div>
-              {{/if}}
-            {{/each}}
+              <div class="speed-grid speed-grid--bottom">
+                <label class="line-field">
+                  <span>Yards/Meters</span>
+                  <input type="number" name="system.movement.yardsMeters" value="{{system.movement.yardsMeters}}" />
+                </label>
+                <label class="line-field">
+                  <span>Tabletop Inches</span>
+                  <input type="number" name="system.movement.tabletopInches" value="{{system.movement.tabletopInches}}" />
+                </label>
+                <div></div>
+                <div></div>
+              </div>
+            </section>
           </div>
         </div>
 
-        <div class="skills-add-row">
-          <button type="button" data-action="item-create" data-type="skill">+ Skill</button>
-        </div>
-      </div>
-    </div>
+        <div class="tmntos-page__middle">
+          <div class="skills-block">
+            <div class="skills-header">
+              <div>PROFESSIONAL Skills</div>
+              <div>%</div>
+              <div>AMATEUR Skills</div>
+              <div>%</div>
+            </div>
 
-    <div class="tmntos-page__bottom">
-      <div class="tmntos-bottom-left">
-        <section class="combat-style-block">
-          <label class="line-field">
-            <span>Combat Style</span>
-            <input type="text" name="system.combat.style" value="{{system.combat.style}}" />
-          </label>
+            <div class="skills-columns">
+              <div class="skills-col">
+                {{#each items.skills as |item|}}
+                  {{#if (eq item.system.category "professional")}}
+                    <div class="skill-line" data-item-id="{{item.id}}">
+                      <div class="skill-line__name">{{item.name}}</div>
+                      <div class="skill-line__percent">{{item.system.percent}}</div>
+                      <div class="skill-line__actions">
+                        <button type="button" data-action="roll-skill">Roll</button>
+                        <button type="button" data-action="item-edit">Edit</button>
+                        <button type="button" data-action="item-delete">Delete</button>
+                      </div>
+                    </div>
+                  {{/if}}
+                {{/each}}
+              </div>
 
-          <div class="combat-inline">
-            <label class="line-field">
-              <span>Actions</span>
-              <input type="number" name="system.combat.actions" value="{{system.combat.actions}}" />
-            </label>
-            <label class="line-field">
-              <span>Initiative</span>
-              <input type="number" name="system.combat.initiative" value="{{system.combat.initiative}}" />
-            </label>
-            <button type="button" class="tmntos-roll-pill" data-action="roll-initiative">Roll</button>
-          </div>
-
-          <div class="combat-inline combat-inline--five">
-            <label class="line-field">
-              <span>Strike</span>
-              <input type="number" name="system.combat.strike" value="{{system.combat.strike}}" />
-            </label>
-            <label class="line-field">
-              <span>Parry</span>
-              <input type="number" name="system.combat.parry" value="{{system.combat.parry}}" />
-            </label>
-            <label class="line-field">
-              <span>Dodge</span>
-              <input type="number" name="system.combat.dodge" value="{{system.combat.dodge}}" />
-            </label>
-          </div>
-
-          <div class="combat-roll-buttons">
-            <button type="button" data-action="roll-strike">Strike</button>
-            <button type="button" data-action="roll-parry">Parry</button>
-            <button type="button" data-action="roll-dodge">Dodge</button>
-          </div>
-
-          <div class="combat-inline combat-inline--five">
-            <label class="line-field">
-              <span>Roll</span>
-              <input type="number" name="system.combat.roll" value="{{system.combat.roll}}" />
-            </label>
-            <label class="line-field">
-              <span>Damage</span>
-              <input type="number" name="system.combat.damage" value="{{system.combat.damage}}" />
-            </label>
-            <label class="line-field line-field--wide">
-              <span>Critical</span>
-              <input type="text" name="system.combat.critical" value="{{system.combat.critical}}" />
-            </label>
-          </div>
-
-          <label class="line-field">
-            <span>Notes</span>
-            <input type="text" name="system.notes.combat" value="{{system.notes.combat}}" />
-          </label>
-        </section>
-
-        <div class="tmntos-actions-reactions">
-          <section class="tmntos-sublist">
-            <div class="tmntos-sublist__title">COMBAT ACTIONS</div>
-            <label><input type="checkbox" name="system.combatActions.attack" {{checked system.combatActions.attack}} /> Attack, Disarm, Tackle</label>
-            <label><input type="checkbox" name="system.combatActions.throw" {{checked system.combatActions.throw}} /> Throw</label>
-            <label><input type="checkbox" name="system.combatActions.hold" {{checked system.combatActions.hold}} /> Hold</label>
-            <label><input type="checkbox" name="system.combatActions.leapAttack" {{checked system.combatActions.leapAttack}} /> Leap Attack</label>
-            <label><input type="checkbox" name="system.combatActions.criticalOrStunWithSneakAttack" {{checked system.combatActions.criticalOrStunWithSneakAttack}} /> Critical or Stun with Sneak Attack</label>
-            <label><input type="checkbox" name="system.combatActions.criticalStrikeAllAttacks" {{checked system.combatActions.criticalStrikeAllAttacks}} /> Critical Strike (all attacks)</label>
-            <label><input type="checkbox" name="system.combatActions.criticalOrStunWithMelee" {{checked system.combatActions.criticalOrStunWithMelee}} /> Critical or Stun with Melee</label>
-            <label><input type="checkbox" name="system.combatActions.deathBlowOnNatural20" {{checked system.combatActions.deathBlowOnNatural20}} /> Death Blow on Natural 20</label>
-          </section>
-
-          <section class="tmntos-sublist">
-            <div class="tmntos-sublist__title">COMBAT REACTIONS</div>
-            <label><input type="checkbox" name="system.combatReactions.parry" {{checked system.combatReactions.parry}} /> Parry, Dodge, Roll</label>
-            <label><input type="checkbox" name="system.combatReactions.autoParry" {{checked system.combatReactions.autoParry}} /> Auto Parry</label>
-            <label><input type="checkbox" name="system.combatReactions.entangle" {{checked system.combatReactions.entangle}} /> Entangle</label>
-            <label><input type="checkbox" name="system.combatReactions.disarm" {{checked system.combatReactions.disarm}} /> Disarm</label>
-            <label><input type="checkbox" name="system.combatReactions.throw" {{checked system.combatReactions.throw}} /> Throw</label>
-          </section>
-        </div>
-
-        <section class="tmntos-box equipment-box">
-          <div class="tmntos-box__title">EQUIPMENT AND VALUABLES</div>
-          {{#each items.equipment as |item|}}
-            <div class="equipment-line" data-item-id="{{item.id}}">
-              <div class="equipment-line__name">{{item.name}}</div>
-              <div class="equipment-line__actions">
-                <a data-action="item-edit">Edit</a>
-                <a data-action="item-delete">X</a>
+              <div class="skills-col">
+                {{#each items.skills as |item|}}
+                  {{#if (eq item.system.category "amateur")}}
+                    <div class="skill-line" data-item-id="{{item.id}}">
+                      <div class="skill-line__name">{{item.name}}</div>
+                      <div class="skill-line__percent">{{item.system.percent}}</div>
+                      <div class="skill-line__actions">
+                        <button type="button" data-action="roll-skill">Roll</button>
+                        <button type="button" data-action="item-edit">Edit</button>
+                        <button type="button" data-action="item-delete">Delete</button>
+                      </div>
+                    </div>
+                  {{/if}}
+                {{/each}}
               </div>
             </div>
-          {{/each}}
-          <div class="skills-add-row">
-            <button type="button" data-action="item-create" data-type="equipment">+ Equipment</button>
-          </div>
-        </section>
-      </div>
 
-      <div class="tmntos-bottom-right">
-        <section class="proficiencies-block">
-          <div class="proficiencies-header">
-            <div>WEAPON PROFICIENCY</div>
-            <div>Ranged Strike</div>
-            <div>Melee Strike</div>
-            <div>Parry</div>
-          </div>
-
-          {{#each items.proficiencies as |item|}}
-            <div class="proficiency-line" data-item-id="{{item.id}}">
-              <div>{{item.name}}</div>
-              <div>{{item.system.rangedStrike}}</div>
-              <div>{{item.system.meleeStrike}}</div>
-              <div>{{item.system.parry}}</div>
+            <div class="skills-add-row">
+              <button type="button" data-action="item-create" data-type="skill">+ Skill</button>
             </div>
-          {{/each}}
-
-          <div class="skills-add-row">
-            <button type="button" data-action="item-create" data-type="proficiency">+ Proficiency</button>
           </div>
-        </section>
+        </div>
 
-        <section class="tmntos-box weapons-box">
-          <div class="weapons-header">
-            <div>WEAPON</div>
-            <div>Damage</div>
-            <div>Range</div>
-            <div>Notes</div>
-          </div>
+        <div class="tmntos-page__bottom">
+          <div class="tmntos-bottom-left">
+            <section class="combat-style-block">
+              <label class="line-field">
+                <span>Combat Style</span>
+                <input type="text" name="system.combat.style" value="{{system.combat.style}}" />
+              </label>
 
-          {{#each items.weapons as |item|}}
-            <div class="weapon-line" data-item-id="{{item.id}}">
-              <div>{{item.name}}</div>
-              <div>{{item.system.damage}}</div>
-              <div>{{item.system.range}}</div>
-              <div class="weapon-line__notes">{{item.system.notes}}</div>
+              <div class="combat-inline">
+                <label class="line-field">
+                  <span>Actions</span>
+                  <input type="number" name="system.combat.actions" value="{{system.combat.actions}}" />
+                </label>
+                <label class="line-field">
+                  <span>Initiative</span>
+                  <input type="number" name="system.combat.initiative" value="{{system.combat.initiative}}" />
+                </label>
+                <button type="button" class="tmntos-roll-pill" data-action="roll-initiative">Roll</button>
+              </div>
+
+              <div class="combat-inline combat-inline--five">
+                <label class="line-field">
+                  <span>Strike</span>
+                  <input type="number" name="system.combat.strike" value="{{system.combat.strike}}" />
+                </label>
+                <label class="line-field">
+                  <span>Parry</span>
+                  <input type="number" name="system.combat.parry" value="{{system.combat.parry}}" />
+                </label>
+                <label class="line-field">
+                  <span>Dodge</span>
+                  <input type="number" name="system.combat.dodge" value="{{system.combat.dodge}}" />
+                </label>
+              </div>
+
+              <div class="combat-roll-buttons">
+                <button type="button" data-action="roll-strike">Strike</button>
+                <button type="button" data-action="roll-parry">Parry</button>
+                <button type="button" data-action="roll-dodge">Dodge</button>
+              </div>
+
+              <div class="combat-inline combat-inline--five">
+                <label class="line-field">
+                  <span>Roll</span>
+                  <input type="number" name="system.combat.roll" value="{{system.combat.roll}}" />
+                </label>
+                <label class="line-field">
+                  <span>Damage</span>
+                  <input type="number" name="system.combat.damage" value="{{system.combat.damage}}" />
+                </label>
+                <label class="line-field line-field--wide">
+                  <span>Critical</span>
+                  <input type="text" name="system.combat.critical" value="{{system.combat.critical}}" />
+                </label>
+              </div>
+
+              <label class="line-field">
+                <span>Notes</span>
+                <input type="text" name="system.notes.combat" value="{{system.notes.combat}}" />
+              </label>
+            </section>
+
+            <div class="tmntos-actions-reactions">
+              <section class="tmntos-sublist">
+                <div class="tmntos-sublist__title">COMBAT ACTIONS</div>
+                <label><input type="checkbox" name="system.combatActions.attack" {{checked system.combatActions.attack}} /> Attack, Disarm, Tackle</label>
+                <label><input type="checkbox" name="system.combatActions.throw" {{checked system.combatActions.throw}} /> Throw</label>
+                <label><input type="checkbox" name="system.combatActions.hold" {{checked system.combatActions.hold}} /> Hold</label>
+                <label><input type="checkbox" name="system.combatActions.leapAttack" {{checked system.combatActions.leapAttack}} /> Leap Attack</label>
+                <label><input type="checkbox" name="system.combatActions.criticalOrStunWithSneakAttack" {{checked system.combatActions.criticalOrStunWithSneakAttack}} /> Critical or Stun with Sneak Attack</label>
+                <label><input type="checkbox" name="system.combatActions.criticalStrikeAllAttacks" {{checked system.combatActions.criticalStrikeAllAttacks}} /> Critical Strike (all attacks)</label>
+                <label><input type="checkbox" name="system.combatActions.criticalOrStunWithMelee" {{checked system.combatActions.criticalOrStunWithMelee}} /> Critical or Stun with Melee</label>
+                <label><input type="checkbox" name="system.combatActions.deathBlowOnNatural20" {{checked system.combatActions.deathBlowOnNatural20}} /> Death Blow on Natural 20</label>
+              </section>
+
+              <section class="tmntos-sublist">
+                <div class="tmntos-sublist__title">COMBAT REACTIONS</div>
+                <label><input type="checkbox" name="system.combatReactions.parry" {{checked system.combatReactions.parry}} /> Parry, Dodge, Roll</label>
+                <label><input type="checkbox" name="system.combatReactions.autoParry" {{checked system.combatReactions.autoParry}} /> Auto Parry</label>
+                <label><input type="checkbox" name="system.combatReactions.entangle" {{checked system.combatReactions.entangle}} /> Entangle</label>
+                <label><input type="checkbox" name="system.combatReactions.disarm" {{checked system.combatReactions.disarm}} /> Disarm</label>
+                <label><input type="checkbox" name="system.combatReactions.throw" {{checked system.combatReactions.throw}} /> Throw</label>
+              </section>
             </div>
-          {{/each}}
 
-          <div class="skills-add-row">
-            <button type="button" data-action="item-create" data-type="weapon">+ Weapon</button>
+            <section class="tmntos-box equipment-box">
+              <div class="tmntos-box__title">EQUIPMENT AND VALUABLES</div>
+              {{#each items.equipment as |item|}}
+                <div class="equipment-line" data-item-id="{{item.id}}">
+                  <div class="equipment-line__name">{{item.name}}</div>
+                  <div class="equipment-line__actions">
+                    <button type="button" data-action="item-edit">Edit</button>
+                    <button type="button" data-action="item-delete">Delete</button>
+                  </div>
+                </div>
+              {{/each}}
+              <div class="skills-add-row">
+                <button type="button" data-action="item-create" data-type="equipment">+ Equipment</button>
+              </div>
+            </section>
           </div>
-        </section>
-      </div>
+
+          <div class="tmntos-bottom-right">
+            <section class="proficiencies-block">
+              <div class="proficiencies-header">
+                <div>WEAPON PROFICIENCY</div>
+                <div>Ranged Strike</div>
+                <div>Melee Strike</div>
+                <div>Parry</div>
+              </div>
+
+              {{#each items.proficiencies as |item|}}
+                <div class="proficiency-line" data-item-id="{{item.id}}">
+                  <div>{{item.name}}</div>
+                  <div>{{item.system.rangedStrike}}</div>
+                  <div>{{item.system.meleeStrike}}</div>
+                  <div>{{item.system.parry}}</div>
+                </div>
+              {{/each}}
+
+              <div class="skills-add-row">
+                <button type="button" data-action="item-create" data-type="proficiency">+ Proficiency</button>
+              </div>
+            </section>
+
+            <section class="tmntos-box weapons-box">
+              <div class="weapons-header">
+                <div>WEAPON</div>
+                <div>Damage</div>
+                <div>Range</div>
+                <div>Notes</div>
+              </div>
+
+              {{#each items.weapons as |item|}}
+                <div class="weapon-line" data-item-id="{{item.id}}">
+                  <div>{{item.name}}</div>
+                  <div>{{item.system.damage}}</div>
+                  <div>{{item.system.range}}</div>
+                  <div class="weapon-line__notes">{{item.system.notes}}</div>
+                </div>
+              {{/each}}
+
+              <div class="skills-add-row">
+                <button type="button" data-action="item-create" data-type="weapon">+ Weapon</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
 
-  <section class="tmntos-page tmntos-page--second">
-    <div class="tmntos-page2-top">
-      <div class="tmntos-page2-left">
-        <section class="tmntos-box tmntos-page2-box">
-          <div class="tmntos-panel-title">MUTANT ORIGINS AND TRAITS</div>
+    <div class="tab" data-group="primary" data-tab="mutations">
+      <section class="tmntos-page tmntos-page--second">
+        <div class="tmntos-page2-top">
+          <div class="tmntos-page2-left">
+            <section class="tmntos-box tmntos-page2-box">
+              <div class="tmntos-panel-title">MUTANT ORIGINS AND TRAITS</div>
 
-          <label class="line-field">
-            <span>Mutant Origin</span>
-            <input type="text" name="system.mutation.mutantOrigin" value="{{system.mutation.mutantOrigin}}" />
-          </label>
+              <label class="line-field">
+                <span>Mutant Origin</span>
+                <input type="text" name="system.mutation.mutantOrigin" value="{{system.mutation.mutantOrigin}}" />
+              </label>
 
-          <div class="tmntos-page2-traits-grid">
-            <label class="line-field">
-              <span>Original Animal</span>
-              <input type="text" name="system.mutation.originalAnimal" value="{{system.mutation.originalAnimal}}" />
-            </label>
-            <label class="line-field">
-              <span>Original Animal Size</span>
-              <input type="text" name="system.mutation.originalAnimalSize" value="{{system.mutation.originalAnimalSize}}" />
-            </label>
+              <div class="tmntos-page2-traits-grid">
+                <label class="line-field">
+                  <span>Original Animal</span>
+                  <input type="text" name="system.mutation.originalAnimal" value="{{system.mutation.originalAnimal}}" />
+                </label>
+                <label class="line-field">
+                  <span>Original Animal Size</span>
+                  <input type="text" name="system.mutation.originalAnimalSize" value="{{system.mutation.originalAnimalSize}}" />
+                </label>
+              </div>
+
+              <div class="tmntos-page2-traits-grid">
+                <label class="line-field">
+                  <span>Size Level</span>
+                  <input type="number" name="system.mutation.sizeLevel" value="{{system.mutation.sizeLevel}}" />
+                </label>
+                <label class="line-field">
+                  <span>Starting Bio-E</span>
+                  <input type="number" name="system.mutation.startingBioE" value="{{system.mutation.startingBioE}}" />
+                </label>
+              </div>
+
+              <div class="tmntos-page2-traits-grid">
+                <label class="line-field">
+                  <span>Size Costs</span>
+                  <input type="number" name="system.mutation.sizeCosts" value="{{system.mutation.sizeCosts}}" />
+                </label>
+                <label class="line-field">
+                  <span>Final Bio-E</span>
+                  <input type="number" name="system.mutation.finalBioE" value="{{system.mutation.finalBioE}}" />
+                </label>
+              </div>
+
+              <div class="tmntos-page2-checkgrid">
+                <label class="tmntos-checkline"><input type="checkbox" /> Hands</label>
+                <label class="tmntos-checkline"><input type="checkbox" /> Biped</label>
+                <label class="tmntos-checkline"><input type="checkbox" /> Speech</label>
+                <label class="tmntos-checkline"><input type="checkbox" /> Looks</label>
+              </div>
+
+              <div class="tmntos-page2-editor-wrap">
+                <label class="tmntos-area-label">Animal Abilities</label>
+                {{editor system.mutation.animalAbilities target="system.mutation.animalAbilities" button=true editable=@root.editable engine="prosemirror"}}
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page2-box">
+              <div class="tmntos-panel-title">NATURAL WEAPONS</div>
+              <div class="tmntos-page2-editor-wrap">
+                <label class="tmntos-area-label">Damage / Traits / Notes</label>
+                {{editor system.mutation.naturalWeapons target="system.mutation.naturalWeapons" button=true editable=@root.editable engine="prosemirror"}}
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page2-box">
+              <div class="tmntos-panel-title">ATTRIBUTE BONUSES</div>
+              <div class="tmntos-page2-bonus-list">
+                <label class="line-field">
+                  <span>Bonus to All Skills</span>
+                  <input type="number" name="system.bonuses.allSkills" value="{{system.bonuses.allSkills}}" />
+                </label>
+                <label class="line-field">
+                  <span>Save vs Psionics</span>
+                  <input type="number" name="system.bonuses.saveVsPsionics" value="{{system.bonuses.saveVsPsionics}}" />
+                </label>
+                <label class="line-field">
+                  <span>Charisma &amp; Trust</span>
+                  <input type="number" name="system.bonuses.charismaTrust" value="{{system.bonuses.charismaTrust}}" />
+                </label>
+                <label class="line-field">
+                  <span>Bonus to Melee &amp; Hurled Damage</span>
+                  <input type="number" name="system.bonuses.meleeHurledDamage" value="{{system.bonuses.meleeHurledDamage}}" />
+                </label>
+                <label class="line-field">
+                  <span>Bonus to Strike, Parry, Dodge</span>
+                  <input type="number" name="system.bonuses.strikeParryDodge" value="{{system.bonuses.strikeParryDodge}}" />
+                </label>
+                <label class="line-field">
+                  <span>Save vs Coma, Toxin, Magic</span>
+                  <input type="number" name="system.bonuses.saveVsComaToxinMagic" value="{{system.bonuses.saveVsComaToxinMagic}}" />
+                </label>
+                <label class="line-field">
+                  <span>Charm &amp; Impress</span>
+                  <input type="number" name="system.bonuses.charmImpress" value="{{system.bonuses.charmImpress}}" />
+                </label>
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page2-box">
+              <div class="tmntos-panel-title">NOTES</div>
+              <div class="tmntos-page2-editor-wrap">
+                <label class="tmntos-area-label">Build / Mutation Notes</label>
+                {{editor system.notes.mutantBuild target="system.notes.mutantBuild" button=true editable=@root.editable engine="prosemirror"}}
+              </div>
+            </section>
           </div>
 
-          <div class="tmntos-page2-traits-grid">
-            <label class="line-field">
-              <span>Size Level</span>
-              <input type="number" name="system.mutation.sizeLevel" value="{{system.mutation.sizeLevel}}" />
-            </label>
+          <div class="tmntos-page2-right">
+            <section class="tmntos-box tmntos-page2-box">
+              <div class="tmntos-panel-title">PSIONIC / SPELL RECORD</div>
+
+              <div class="tmntos-page2-magic-top">
+                <label class="line-field">
+                  <span>Spells per Day</span>
+                  <input type="number" name="system.powers.spellsPerDay" value="{{system.powers.spellsPerDay}}" />
+                </label>
+                <label class="line-field">
+                  <span>Spell Combat</span>
+                  <input type="text" name="system.powers.spellCombat" value="{{system.powers.spellCombat}}" />
+                </label>
+                <label class="line-field">
+                  <span>Spells per Round</span>
+                  <input type="number" name="system.powers.spellsPerRound" value="{{system.powers.spellsPerRound}}" />
+                </label>
+              </div>
+
+              <div class="tmntos-page2-save-row">
+                <label class="line-field">
+                  <span>Save vs Spell Magic</span>
+                  <input type="number" name="system.powers.saveVsSpellMagic" value="{{system.powers.saveVsSpellMagic}}" />
+                </label>
+                <label class="line-field">
+                  <span>Save vs Circle Magic</span>
+                  <input type="number" name="system.powers.saveVsCircleMagic" value="{{system.powers.saveVsCircleMagic}}" />
+                </label>
+                <label class="line-field">
+                  <span>Save vs Psionics</span>
+                  <input type="number" name="system.powers.saveVsPsionics" value="{{system.powers.saveVsPsionics}}" />
+                </label>
+              </div>
+
+              <div class="tmntos-page2-save-row">
+                <label class="line-field">
+                  <span>Spell Strength</span>
+                  <input type="number" name="system.powers.spellStrength" value="{{system.powers.spellStrength}}" />
+                </label>
+                <label class="line-field line-field--wide">
+                  <span>Saves vs Strangeness</span>
+                  <input type="text" name="system.powers.savesVsStrangeness" value="{{system.powers.savesVsStrangeness}}" />
+                </label>
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page2-box tmntos-powers-box">
+              <div class="tmntos-page2-powers-header">
+                <div>ABILITY / PSIONIC / SPELL NAME</div>
+                <div>Range</div>
+                <div>Saving Throw</div>
+                <div>Duration</div>
+                <div>Effect</div>
+              </div>
+
+              {{#each items.powers as |item|}}
+                <div class="tmntos-page2-power-row" data-item-id="{{item.id}}">
+                  <div class="tmntos-page2-power-name">
+                    <div class="tmntos-page2-power-title">{{item.name}}</div>
+                    <div class="tmntos-page2-power-meta">{{item.system.category}} {{#if item.system.bioECost}}• {{item.system.bioECost}} Bio-E{{/if}}</div>
+                  </div>
+                  <div>{{item.system.range}}</div>
+                  <div>{{item.system.savingThrow}}</div>
+                  <div>{{item.system.duration}}</div>
+                  <div class="tmntos-page2-power-effect">{{{item.system.effect}}}</div>
+                </div>
+              {{/each}}
+
+              {{#each items.spells as |item|}}
+                <div class="tmntos-page2-power-row" data-item-id="{{item.id}}">
+                  <div class="tmntos-page2-power-name">
+                    <div class="tmntos-page2-power-title">{{item.name}}</div>
+                    <div class="tmntos-page2-power-meta">spell</div>
+                  </div>
+                  <div>{{item.system.range}}</div>
+                  <div>{{item.system.savingThrow}}</div>
+                  <div>{{item.system.duration}}</div>
+                  <div class="tmntos-page2-power-effect">{{{item.system.effect}}}</div>
+                </div>
+              {{/each}}
+
+              <div class="skills-add-row">
+                <button type="button" data-action="item-create" data-type="power">+ Power</button>
+                <button type="button" data-action="item-create" data-type="spell">+ Spell</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="bioe">
+      <section class="tmntos-page tmntos-page--third">
+        <div class="tmntos-page3-title-block">
+          <div class="tmntos-page3-title">BIO-E WORKSHEET FOR MUTANT CHARACTER CREATION</div>
+          <div class="tmntos-page3-subtitle">BIO-E WORKSHEET</div>
+        </div>
+
+        <div class="tmntos-page3-top">
+          <div class="tmntos-page3-left">
+            <section class="tmntos-box tmntos-page3-box">
+              <div class="tmntos-panel-title">ORIGINAL ANIMAL</div>
+
+              <label class="line-field">
+                <span>Original Animal</span>
+                <input type="text" name="system.mutation.originalAnimal" value="{{system.mutation.originalAnimal}}" />
+              </label>
+
+              <label class="line-field">
+                <span>Original Animal Size</span>
+                <input type="text" name="system.mutation.originalAnimalSize" value="{{system.mutation.originalAnimalSize}}" />
+              </label>
+
+              <label class="line-field">
+                <span>Size Level</span>
+                <input type="number" name="system.mutation.sizeLevel" value="{{system.mutation.sizeLevel}}" />
+              </label>
+
+              <div class="tmntos-page3-note-inline">
+                <span>-5 Bio-E for each size level increase. +5 for each size level decrease</span>
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page3-box">
+              <div class="tmntos-panel-title">HUMAN FEATURES</div>
+
+              <div class="tmntos-page3-human-grid">
+                <div class="tmntos-page3-human-head">Feature</div>
+                <div class="tmntos-page3-human-head">None / Partial / Full</div>
+                <div class="tmntos-page3-human-head">Bio-E Cost</div>
+
+                <div class="tmntos-page3-human-label">Biped</div>
+                <input type="text" />
+                <input type="text" />
+
+                <div class="tmntos-page3-human-label">Hands</div>
+                <input type="text" />
+                <input type="text" />
+
+                <div class="tmntos-page3-human-label">Speech</div>
+                <input type="text" />
+                <input type="text" />
+
+                <div class="tmntos-page3-human-label">Looks</div>
+                <input type="text" />
+                <input type="text" />
+              </div>
+
+              <div class="tmntos-page3-editor-wrap">
+                <label class="tmntos-area-label">Human Features Notes</label>
+                {{editor system.mutation.humanFeatures target="system.mutation.humanFeatures" button=true editable=@root.editable engine="prosemirror"}}
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page3-box">
+              <div class="tmntos-panel-title">ANIMAL ABILITIES</div>
+              <div class="tmntos-page3-editor-wrap">
+                <label class="tmntos-area-label">Animal Ability Purchases / Costs</label>
+                {{editor system.mutation.animalAbilities target="system.mutation.animalAbilities" button=true editable=@root.editable engine="prosemirror"}}
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page3-box">
+              <div class="tmntos-panel-title">BUILD NOTES</div>
+              <div class="tmntos-page3-editor-wrap">
+                <label class="tmntos-area-label">Other Abilities / Notes</label>
+                {{editor system.notes.mutantBuild target="system.notes.mutantBuild" button=true editable=@root.editable engine="prosemirror"}}
+              </div>
+            </section>
+          </div>
+
+          <div class="tmntos-page3-right">
+            <section class="tmntos-box tmntos-page3-box">
+              <div class="tmntos-panel-title">MUTANT ANIMAL PSIONIC POWERS</div>
+              <div class="tmntos-page3-powerlist">
+                <div>Animal Control — 10 Bio-E</div>
+                <div>Animal Speech — 5 Bio-E</div>
+                <div>Bio-Manipulation — 20 Bio-E</div>
+                <div>Blind — 20 Bio-E</div>
+                <div>Deafness — 20 Bio-E</div>
+                <div>Mute — 20 Bio-E</div>
+                <div>Paralysis — 20 Bio-E</div>
+                <div>Stun — 20 Bio-E</div>
+                <div>Tissue — 10 Bio-E</div>
+                <div>Detect Psionics — 10 Bio-E</div>
+                <div>Hypnotic Suggestion — 15 Bio-E</div>
+                <div>Mind Block — 15 Bio-E</div>
+                <div>Mind Trap — 25 Bio-E</div>
+                <div>See Aura — 15 Bio-E</div>
+                <div>Sixth Sense — 10 Bio-E</div>
+                <div>Telepathic Transmission — 5 Bio-E</div>
+                <div>Alter Aura — 10 Bio-E</div>
+                <div>Astral Projection — 25 Bio-E</div>
+                <div>Mental Assault — 30 Bio-E</div>
+                <div>Mind Control — 25 Bio-E</div>
+                <div>Telepathy — 10 Bio-E</div>
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page3-box">
+              <div class="tmntos-panel-title">MUTANT HUMAN ABILITIES</div>
+              <div class="tmntos-page3-powerlist">
+                <div>Adhesion — 15 Bio-E</div>
+                <div>Advanced Taste — 5 Bio-E</div>
+                <div>Advanced Touch — 5 Bio-E</div>
+                <div>Advanced Vision — 5 Bio-E</div>
+                <div>Create Darkness — 20 Bio-E</div>
+                <div>Create Force Field — 30 Bio-E</div>
+                <div>Electrical Field — 25 Bio-E</div>
+                <div>Energy Resistance — 20 Bio-E</div>
+                <div>Extraordinary I.Q. — 15 Bio-E</div>
+                <div>Extraordinary M.E. — 10 Bio-E</div>
+                <div>Mechanical Manipulation — 15 Bio-E</div>
+                <div>Shadow Meld — 20 Bio-E</div>
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page3-box">
+              <div class="tmntos-panel-title">MUTANT HOMINID ABILITIES / POWERS</div>
+              <div class="tmntos-page3-powerlist">
+                <div>Detect Psionics — 10 Bio-E</div>
+                <div>Hypnotic Suggestion — 20 Bio-E</div>
+                <div>Mind Block — 15 Bio-E</div>
+                <div>See Aura — 15 Bio-E</div>
+                <div>Techno Mind — 15 Bio-E</div>
+                <div>Telepathic Transmission — 5 Bio-E</div>
+                <div>Mental Assault — 25 Bio-E</div>
+                <div>Mind Control — 30 Bio-E</div>
+                <div>Telepathy — 10 Bio-E</div>
+                <div>Techno Mind — 10 Bio-E</div>
+                <div>Extraordinary I.Q. — 10 Bio-E</div>
+                <div>Extraordinary M.A. — 10 Bio-E</div>
+                <div>Extraordinary M.E. — 10 Bio-E</div>
+                <div>Extraordinary P.E. — 15 Bio-E</div>
+                <div>Extraordinary P.P. — 15 Bio-E</div>
+                <div>Extraordinary P.S. — 10 Bio-E</div>
+                <div>Extraordinary P.B. — 5 Bio-E</div>
+                <div>Extraordinary Speed — 10 Bio-E</div>
+              </div>
+            </section>
+
+            <section class="tmntos-box tmntos-page3-box">
+              <div class="tmntos-panel-title">MUTANT PROSTHETIC PSIONIC POWERS</div>
+              <div class="tmntos-page3-powerlist">
+                <div>Ext. Ectoplasmic Hands — 10 Bio-E</div>
+                <div>Psychic Walk — 5 Bio-E</div>
+                <div>Ectoplasmic Hands — 10 Bio-E</div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <section class="tmntos-box tmntos-page3-summary-box">
+          <div class="tmntos-panel-title">BIO-E TOTALS</div>
+
+          <div class="tmntos-page3-summary-grid">
             <label class="line-field">
               <span>Starting Bio-E</span>
               <input type="number" name="system.mutation.startingBioE" value="{{system.mutation.startingBioE}}" />
             </label>
-          </div>
-
-          <div class="tmntos-page2-traits-grid">
             <label class="line-field">
               <span>Size Costs</span>
               <input type="number" name="system.mutation.sizeCosts" value="{{system.mutation.sizeCosts}}" />
@@ -465,327 +810,162 @@
             </label>
           </div>
 
-          <div class="tmntos-page2-checkgrid">
-            <label class="tmntos-checkline"><input type="checkbox" /> Hands</label>
-            <label class="tmntos-checkline"><input type="checkbox" /> Biped</label>
-            <label class="tmntos-checkline"><input type="checkbox" /> Speech</label>
-            <label class="tmntos-checkline"><input type="checkbox" /> Looks</label>
-          </div>
-
-          <div class="tmntos-page2-editor-wrap">
-            <label class="tmntos-area-label">Animal Abilities</label>
-            {{editor system.mutation.animalAbilities target="system.mutation.animalAbilities" button=true editable=@root.editable engine="prosemirror"}}
+          <div class="tmntos-page3-summary-note">
+            *Final Bio-E should be zero. Spend it all.
           </div>
         </section>
+      </section>
+    </div>
 
-        <section class="tmntos-box tmntos-page2-box">
-          <div class="tmntos-panel-title">NATURAL WEAPONS</div>
-          <div class="tmntos-page2-editor-wrap">
-            <label class="tmntos-area-label">Damage / Traits / Notes</label>
-            {{editor system.mutation.naturalWeapons target="system.mutation.naturalWeapons" button=true editable=@root.editable engine="prosemirror"}}
-          </div>
-        </section>
-
-        <section class="tmntos-box tmntos-page2-box">
-          <div class="tmntos-panel-title">ATTRIBUTE BONUSES</div>
-          <div class="tmntos-page2-bonus-list">
-            <label class="line-field">
-              <span>Bonus to All Skills</span>
-              <input type="number" name="system.bonuses.allSkills" value="{{system.bonuses.allSkills}}" />
-            </label>
-            <label class="line-field">
-              <span>Save vs Psionics</span>
-              <input type="number" name="system.bonuses.saveVsPsionics" value="{{system.bonuses.saveVsPsionics}}" />
-            </label>
-            <label class="line-field">
-              <span>Charisma &amp; Trust</span>
-              <input type="number" name="system.bonuses.charismaTrust" value="{{system.bonuses.charismaTrust}}" />
-            </label>
-            <label class="line-field">
-              <span>Bonus to Melee &amp; Hurled Damage</span>
-              <input type="number" name="system.bonuses.meleeHurledDamage" value="{{system.bonuses.meleeHurledDamage}}" />
-            </label>
-            <label class="line-field">
-              <span>Bonus to Strike, Parry, Dodge</span>
-              <input type="number" name="system.bonuses.strikeParryDodge" value="{{system.bonuses.strikeParryDodge}}" />
-            </label>
-            <label class="line-field">
-              <span>Save vs Coma, Toxin, Magic</span>
-              <input type="number" name="system.bonuses.saveVsComaToxinMagic" value="{{system.bonuses.saveVsComaToxinMagic}}" />
-            </label>
-            <label class="line-field">
-              <span>Charm &amp; Impress</span>
-              <input type="number" name="system.bonuses.charmImpress" value="{{system.bonuses.charmImpress}}" />
-            </label>
-          </div>
-        </section>
-
-        <section class="tmntos-box tmntos-page2-box">
-          <div class="tmntos-panel-title">NOTES</div>
-          <div class="tmntos-page2-editor-wrap">
-            <label class="tmntos-area-label">Build / Mutation Notes</label>
-            {{editor system.notes.mutantBuild target="system.notes.mutantBuild" button=true editable=@root.editable engine="prosemirror"}}
-          </div>
-        </section>
-      </div>
-
-      <div class="tmntos-page2-right">
-        <section class="tmntos-box tmntos-page2-box">
-          <div class="tmntos-panel-title">PSIONIC / SPELL RECORD</div>
-
-          <div class="tmntos-page2-magic-top">
-            <label class="line-field">
-              <span>Spells per Day</span>
-              <input type="number" name="system.powers.spellsPerDay" value="{{system.powers.spellsPerDay}}" />
-            </label>
-            <label class="line-field">
-              <span>Spell Combat</span>
-              <input type="text" name="system.powers.spellCombat" value="{{system.powers.spellCombat}}" />
-            </label>
-            <label class="line-field">
-              <span>Spells per Round</span>
-              <input type="number" name="system.powers.spellsPerRound" value="{{system.powers.spellsPerRound}}" />
-            </label>
-          </div>
-
-          <div class="tmntos-page2-save-row">
-            <label class="line-field">
-              <span>Save vs Spell Magic</span>
-              <input type="number" name="system.powers.saveVsSpellMagic" value="{{system.powers.saveVsSpellMagic}}" />
-            </label>
-            <label class="line-field">
-              <span>Save vs Circle Magic</span>
-              <input type="number" name="system.powers.saveVsCircleMagic" value="{{system.powers.saveVsCircleMagic}}" />
-            </label>
-            <label class="line-field">
-              <span>Save vs Psionics</span>
-              <input type="number" name="system.powers.saveVsPsionics" value="{{system.powers.saveVsPsionics}}" />
-            </label>
-          </div>
-
-          <div class="tmntos-page2-save-row">
-            <label class="line-field">
-              <span>Spell Strength</span>
-              <input type="number" name="system.powers.spellStrength" value="{{system.powers.spellStrength}}" />
-            </label>
-            <label class="line-field line-field--wide">
-              <span>Saves vs Strangeness</span>
-              <input type="text" name="system.powers.savesVsStrangeness" value="{{system.powers.savesVsStrangeness}}" />
-            </label>
-          </div>
-        </section>
-
-        <section class="tmntos-box tmntos-page2-box tmntos-powers-box">
-          <div class="tmntos-page2-powers-header">
-            <div>ABILITY / PSIONIC / SPELL NAME</div>
-            <div>Range</div>
-            <div>Saving Throw</div>
-            <div>Duration</div>
-            <div>Effect</div>
-          </div>
-
-          {{#each items.powers as |item|}}
-            <div class="tmntos-page2-power-row" data-item-id="{{item.id}}">
-              <div class="tmntos-page2-power-name">
-                <div class="tmntos-page2-power-title">{{item.name}}</div>
-                <div class="tmntos-page2-power-meta">{{item.system.category}} {{#if item.system.bioECost}}• {{item.system.bioECost}} Bio-E{{/if}}</div>
+    <div class="tab" data-group="primary" data-tab="inventory">
+      <section class="tmntos-page tmntos-page--inventory">
+        <div class="tmntos-inventory-grid">
+          <section class="tmntos-box">
+            <div class="tmntos-panel-title">Weapons</div>
+            {{#each items.weapons as |item|}}
+              <div class="tmntos-item-row tmntos-item-row--actions" data-item-id="{{item.id}}">
+                <div class="tmntos-item-row__name">{{item.name}}</div>
+                <div>{{item.system.damage}}</div>
+                <div>{{item.system.range}}</div>
+                <div class="tmntos-item-row__actions">
+                  <button type="button" data-action="roll-weapon-attack">Attack</button>
+                  <button type="button" data-action="roll-weapon-damage">Damage</button>
+                  <button type="button" data-action="item-edit">Edit</button>
+                  <button type="button" data-action="item-delete">Delete</button>
+                </div>
               </div>
-              <div>{{item.system.range}}</div>
-              <div>{{item.system.savingThrow}}</div>
-              <div>{{item.system.duration}}</div>
-              <div class="tmntos-page2-power-effect">{{{item.system.effect}}}</div>
+            {{/each}}
+            <div class="skills-add-row">
+              <button type="button" data-action="item-create" data-type="weapon">+ Weapon</button>
             </div>
-          {{/each}}
+          </section>
 
-          <div class="skills-add-row">
-            <button type="button" data-action="item-create" data-type="power">+ Power</button>
-          </div>
-        </section>
-      </div>
+          <section class="tmntos-box">
+            <div class="tmntos-panel-title">Armor</div>
+            {{#each items.armor as |item|}}
+              <div class="tmntos-item-row tmntos-item-row--actions {{#if item.system.equipped}}tmntos-item-row--equipped{{/if}}" data-item-id="{{item.id}}">
+                <div class="tmntos-item-row__name">
+                  {{item.name}}
+                  {{#if item.system.equipped}}<span class="tmntos-equipped-tag">Equipped</span>{{/if}}
+                </div>
+                <div>Cost {{item.system.cost}}</div>
+                <div>AR {{item.system.ar}} / SDC {{item.system.sdc}}</div>
+                <div>{{item.system.details}}</div>
+                <div class="tmntos-item-row__actions">
+                  <button type="button" data-action="item-toggle-equip">
+                    {{#if item.system.equipped}}Unequip{{else}}Equip{{/if}}
+                  </button>
+                  <button type="button" data-action="item-edit">Edit</button>
+                  <button type="button" data-action="item-delete">Delete</button>
+                </div>
+              </div>
+            {{/each}}
+            <div class="skills-add-row">
+              <button type="button" data-action="item-create" data-type="armor">+ Armor</button>
+            </div>
+          </section>
+
+          <section class="tmntos-box">
+            <div class="tmntos-panel-title">Shields</div>
+            {{#each items.shields as |item|}}
+              <div class="tmntos-item-row tmntos-item-row--actions {{#if item.system.equipped}}tmntos-item-row--equipped{{/if}}" data-item-id="{{item.id}}">
+                <div class="tmntos-item-row__name">
+                  {{item.name}}
+                  {{#if item.system.equipped}}<span class="tmntos-equipped-tag">Equipped</span>{{/if}}
+                </div>
+                <div>Cost {{item.system.cost}}</div>
+                <div>Parry {{item.system.parry}} / SDC {{item.system.sdc}}</div>
+                <div>{{item.system.details}}</div>
+                <div class="tmntos-item-row__actions">
+                  <button type="button" data-action="item-toggle-equip">
+                    {{#if item.system.equipped}}Unequip{{else}}Equip{{/if}}
+                  </button>
+                  <button type="button" data-action="item-edit">Edit</button>
+                  <button type="button" data-action="item-delete">Delete</button>
+                </div>
+              </div>
+            {{/each}}
+            <div class="skills-add-row">
+              <button type="button" data-action="item-create" data-type="shield">+ Shield</button>
+            </div>
+          </section>
+
+          <section class="tmntos-box">
+            <div class="tmntos-panel-title">Gear</div>
+            {{#each items.equipment as |item|}}
+              <div class="tmntos-item-row" data-item-id="{{item.id}}">
+                <div class="tmntos-item-row__name">{{item.name}}</div>
+                <div>x{{item.system.quantity}}</div>
+                <div>{{item.system.value}}</div>
+                <div class="tmntos-item-row__actions">
+                  <button type="button" data-action="item-edit">Edit</button>
+                  <button type="button" data-action="item-delete">Delete</button>
+                </div>
+              </div>
+            {{/each}}
+            <div class="skills-add-row">
+              <button type="button" data-action="item-create" data-type="equipment">+ Gear</button>
+            </div>
+          </section>
+
+          <section class="tmntos-box">
+            <div class="tmntos-panel-title">Skills</div>
+            {{#each items.skills as |item|}}
+              <div class="tmntos-item-row" data-item-id="{{item.id}}">
+                <div class="tmntos-item-row__name">{{item.name}}</div>
+                <div>{{item.system.category}}</div>
+                <div>{{item.system.percent}}%</div>
+                <div class="tmntos-item-row__actions">
+                  <button type="button" data-action="roll-skill">Roll</button>
+                  <button type="button" data-action="item-edit">Edit</button>
+                  <button type="button" data-action="item-delete">Delete</button>
+                </div>
+              </div>
+            {{/each}}
+            <div class="skills-add-row">
+              <button type="button" data-action="item-create" data-type="skill">+ Skill</button>
+            </div>
+          </section>
+
+          <section class="tmntos-box">
+            <div class="tmntos-panel-title">Psionic Powers</div>
+            {{#each items.powers as |item|}}
+              <div class="tmntos-item-row tmntos-item-row--actions" data-item-id="{{item.id}}">
+                <div class="tmntos-item-row__name">{{item.name}}</div>
+                <div>{{item.system.category}}</div>
+                <div>{{item.system.bioECost}} Bio-E</div>
+                <div class="tmntos-item-row__actions">
+                  <button type="button" data-action="roll-power">Use</button>
+                  <button type="button" data-action="item-edit">Edit</button>
+                  <button type="button" data-action="item-delete">Delete</button>
+                </div>
+              </div>
+            {{/each}}
+            <div class="skills-add-row">
+              <button type="button" data-action="item-create" data-type="power">+ Power</button>
+            </div>
+          </section>
+
+          <section class="tmntos-box">
+            <div class="tmntos-panel-title">Spells</div>
+            {{#each items.spells as |item|}}
+              <div class="tmntos-item-row tmntos-item-row--actions" data-item-id="{{item.id}}">
+                <div class="tmntos-item-row__name">{{item.name}}</div>
+                <div>{{item.system.range}}</div>
+                <div>{{item.system.duration}}</div>
+                <div class="tmntos-item-row__actions">
+                  <button type="button" data-action="roll-spell">Cast</button>
+                  <button type="button" data-action="item-edit">Edit</button>
+                  <button type="button" data-action="item-delete">Delete</button>
+                </div>
+              </div>
+            {{/each}}
+            <div class="skills-add-row">
+              <button type="button" data-action="item-create" data-type="spell">+ Spell</button>
+            </div>
+          </section>
+        </div>
+      </section>
     </div>
-  </section>
-
-  <section class="tmntos-page tmntos-page--third">
-    <div class="tmntos-page3-title-block">
-      <div class="tmntos-page3-title">BIO-E WORKSHEET FOR MUTANT CHARACTER CREATION</div>
-      <div class="tmntos-page3-subtitle">BIO-E WORKSHEET</div>
-    </div>
-
-    <div class="tmntos-page3-top">
-      <div class="tmntos-page3-left">
-        <section class="tmntos-box tmntos-page3-box">
-          <div class="tmntos-panel-title">ORIGINAL ANIMAL</div>
-
-          <label class="line-field">
-            <span>Original Animal</span>
-            <input type="text" name="system.mutation.originalAnimal" value="{{system.mutation.originalAnimal}}" />
-          </label>
-
-          <label class="line-field">
-            <span>Original Animal Size</span>
-            <input type="text" name="system.mutation.originalAnimalSize" value="{{system.mutation.originalAnimalSize}}" />
-          </label>
-
-          <label class="line-field">
-            <span>Size Level</span>
-            <input type="number" name="system.mutation.sizeLevel" value="{{system.mutation.sizeLevel}}" />
-          </label>
-
-          <div class="tmntos-page3-note-inline">
-            <span>-5 Bio-E for each size level increase. +5 for each size level decrease</span>
-          </div>
-        </section>
-
-        <section class="tmntos-box tmntos-page3-box">
-          <div class="tmntos-panel-title">HUMAN FEATURES</div>
-
-          <div class="tmntos-page3-human-grid">
-            <div class="tmntos-page3-human-head">Feature</div>
-            <div class="tmntos-page3-human-head">None / Partial / Full</div>
-            <div class="tmntos-page3-human-head">Bio-E Cost</div>
-
-            <div class="tmntos-page3-human-label">Biped</div>
-            <input type="text" />
-            <input type="text" />
-
-            <div class="tmntos-page3-human-label">Hands</div>
-            <input type="text" />
-            <input type="text" />
-
-            <div class="tmntos-page3-human-label">Speech</div>
-            <input type="text" />
-            <input type="text" />
-
-            <div class="tmntos-page3-human-label">Looks</div>
-            <input type="text" />
-            <input type="text" />
-          </div>
-
-          <div class="tmntos-page3-editor-wrap">
-            <label class="tmntos-area-label">Human Features Notes</label>
-            {{editor system.mutation.humanFeatures target="system.mutation.humanFeatures" button=true editable=@root.editable engine="prosemirror"}}
-          </div>
-        </section>
-
-        <section class="tmntos-box tmntos-page3-box">
-          <div class="tmntos-panel-title">ANIMAL ABILITIES</div>
-          <div class="tmntos-page3-editor-wrap">
-            <label class="tmntos-area-label">Animal Ability Purchases / Costs</label>
-            {{editor system.mutation.animalAbilities target="system.mutation.animalAbilities" button=true editable=@root.editable engine="prosemirror"}}
-          </div>
-        </section>
-
-        <section class="tmntos-box tmntos-page3-box">
-          <div class="tmntos-panel-title">BUILD NOTES</div>
-          <div class="tmntos-page3-editor-wrap">
-            <label class="tmntos-area-label">Other Abilities / Notes</label>
-            {{editor system.notes.mutantBuild target="system.notes.mutantBuild" button=true editable=@root.editable engine="prosemirror"}}
-          </div>
-        </section>
-      </div>
-
-      <div class="tmntos-page3-right">
-        <section class="tmntos-box tmntos-page3-box">
-          <div class="tmntos-panel-title">MUTANT ANIMAL PSIONIC POWERS</div>
-          <div class="tmntos-page3-powerlist">
-            <div>Animal Control — 10 Bio-E</div>
-            <div>Animal Speech — 5 Bio-E</div>
-            <div>Bio-Manipulation — 20 Bio-E</div>
-            <div>Blind — 20 Bio-E</div>
-            <div>Deafness — 20 Bio-E</div>
-            <div>Mute — 20 Bio-E</div>
-            <div>Paralysis — 20 Bio-E</div>
-            <div>Stun — 20 Bio-E</div>
-            <div>Tissue — 10 Bio-E</div>
-            <div>Detect Psionics — 10 Bio-E</div>
-            <div>Hypnotic Suggestion — 15 Bio-E</div>
-            <div>Mind Block — 15 Bio-E</div>
-            <div>Mind Trap — 25 Bio-E</div>
-            <div>See Aura — 15 Bio-E</div>
-            <div>Sixth Sense — 10 Bio-E</div>
-            <div>Telepathic Transmission — 5 Bio-E</div>
-            <div>Alter Aura — 10 Bio-E</div>
-            <div>Astral Projection — 25 Bio-E</div>
-            <div>Mental Assault — 30 Bio-E</div>
-            <div>Mind Control — 25 Bio-E</div>
-            <div>Telepathy — 10 Bio-E</div>
-          </div>
-        </section>
-
-        <section class="tmntos-box tmntos-page3-box">
-          <div class="tmntos-panel-title">MUTANT HUMAN ABILITIES</div>
-          <div class="tmntos-page3-powerlist">
-            <div>Adhesion — 15 Bio-E</div>
-            <div>Advanced Taste — 5 Bio-E</div>
-            <div>Advanced Touch — 5 Bio-E</div>
-            <div>Advanced Vision — 5 Bio-E</div>
-            <div>Create Darkness — 20 Bio-E</div>
-            <div>Create Force Field — 30 Bio-E</div>
-            <div>Electrical Field — 25 Bio-E</div>
-            <div>Energy Resistance — 20 Bio-E</div>
-            <div>Extraordinary I.Q. — 15 Bio-E</div>
-            <div>Extraordinary M.E. — 10 Bio-E</div>
-            <div>Mechanical Manipulation — 15 Bio-E</div>
-            <div>Shadow Meld — 20 Bio-E</div>
-          </div>
-        </section>
-
-        <section class="tmntos-box tmntos-page3-box">
-          <div class="tmntos-panel-title">MUTANT HOMINID ABILITIES / POWERS</div>
-          <div class="tmntos-page3-powerlist">
-            <div>Detect Psionics — 10 Bio-E</div>
-            <div>Hypnotic Suggestion — 20 Bio-E</div>
-            <div>Mind Block — 15 Bio-E</div>
-            <div>See Aura — 15 Bio-E</div>
-            <div>Techno Mind — 15 Bio-E</div>
-            <div>Telepathic Transmission — 5 Bio-E</div>
-            <div>Mental Assault — 25 Bio-E</div>
-            <div>Mind Control — 30 Bio-E</div>
-            <div>Telepathy — 10 Bio-E</div>
-            <div>Techno Mind — 10 Bio-E</div>
-            <div>Extraordinary I.Q. — 10 Bio-E</div>
-            <div>Extraordinary M.A. — 10 Bio-E</div>
-            <div>Extraordinary M.E. — 10 Bio-E</div>
-            <div>Extraordinary P.E. — 15 Bio-E</div>
-            <div>Extraordinary P.P. — 15 Bio-E</div>
-            <div>Extraordinary P.S. — 10 Bio-E</div>
-            <div>Extraordinary P.B. — 5 Bio-E</div>
-            <div>Extraordinary Speed — 10 Bio-E</div>
-          </div>
-        </section>
-
-        <section class="tmntos-box tmntos-page3-box">
-          <div class="tmntos-panel-title">MUTANT PROSTHETIC PSIONIC POWERS</div>
-          <div class="tmntos-page3-powerlist">
-            <div>Ext. Ectoplasmic Hands — 10 Bio-E</div>
-            <div>Psychic Walk — 5 Bio-E</div>
-            <div>Ectoplasmic Hands — 10 Bio-E</div>
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <section class="tmntos-box tmntos-page3-summary-box">
-      <div class="tmntos-panel-title">BIO-E TOTALS</div>
-
-      <div class="tmntos-page3-summary-grid">
-        <label class="line-field">
-          <span>Starting Bio-E</span>
-          <input type="number" name="system.mutation.startingBioE" value="{{system.mutation.startingBioE}}" />
-        </label>
-        <label class="line-field">
-          <span>Size Costs</span>
-          <input type="number" name="system.mutation.sizeCosts" value="{{system.mutation.sizeCosts}}" />
-        </label>
-        <label class="line-field">
-          <span>Final Bio-E</span>
-          <input type="number" name="system.mutation.finalBioE" value="{{system.mutation.finalBioE}}" />
-        </label>
-      </div>
-
-      <div class="tmntos-page3-summary-note">
-        *Final Bio-E should be zero. Spend it all.
-      </div>
-    </section>
   </section>
 </form>

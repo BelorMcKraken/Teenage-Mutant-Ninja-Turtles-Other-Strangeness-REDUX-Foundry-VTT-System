@@ -1,7 +1,9 @@
 const {
+  ArrayField,
   BooleanField,
   HTMLField,
   NumberField,
+  ObjectField,
   SchemaField,
   StringField
 } = foundry.data.fields;
@@ -16,11 +18,27 @@ function integerField(initial = 0, min = 0, max = null) {
   });
 }
 
+function numberField(initial = 0, min = null, max = null) {
+  return new NumberField({
+    required: true,
+    min,
+    max,
+    initial
+  });
+}
+
 function textField(initial = "") {
   return new StringField({
     required: true,
     blank: true,
     initial
+  });
+}
+
+function htmlField() {
+  return new HTMLField({
+    required: true,
+    blank: true
   });
 }
 
@@ -47,6 +65,36 @@ export class TMNTOSWeaponDataModel extends TMNTOSBaseItemDataModel {
       range: textField(""),
       proficiency: textField(""),
       isNatural: new BooleanField({ required: true, initial: false })
+    };
+  }
+}
+
+export class TMNTOSArmorDataModel extends TMNTOSBaseItemDataModel {
+  static defineSchema() {
+    return {
+      ...super.defineSchema(),
+      cost: textField(""),
+      ar: integerField(0, 0),
+      sdc: integerField(0, 0),
+      weight: textField(""),
+      details: textField(""),
+      properties: textField(""),
+      equipped: new BooleanField({ required: true, initial: false })
+    };
+  }
+}
+
+export class TMNTOSShieldDataModel extends TMNTOSBaseItemDataModel {
+  static defineSchema() {
+    return {
+      ...super.defineSchema(),
+      cost: textField(""),
+      parry: integerField(0, -20, 20),
+      sdc: integerField(0, 0),
+      weight: textField(""),
+      details: textField(""),
+      properties: textField(""),
+      equipped: new BooleanField({ required: true, initial: false })
     };
   }
 }
@@ -91,7 +139,19 @@ export class TMNTOSPowerDataModel extends TMNTOSBaseItemDataModel {
       range: textField(""),
       duration: textField(""),
       savingThrow: textField(""),
-      effect: new HTMLField({ required: true, blank: true })
+      effect: htmlField()
+    };
+  }
+}
+
+export class TMNTOSSpellDataModel extends TMNTOSBaseItemDataModel {
+  static defineSchema() {
+    return {
+      ...super.defineSchema(),
+      range: textField(""),
+      duration: textField(""),
+      savingThrow: textField(""),
+      effect: htmlField()
     };
   }
 }
@@ -101,12 +161,71 @@ export class TMNTOSEquipmentDataModel extends TMNTOSBaseItemDataModel {
     return {
       ...super.defineSchema(),
       quantity: integerField(1, 0),
-      weight: new NumberField({
-        required: true,
-        min: 0,
-        initial: 0
-      }),
+      weight: numberField(0, 0),
       value: integerField(0, 0)
+    };
+  }
+}
+
+export class TMNTOSAnimalDataModel extends TMNTOSBaseItemDataModel {
+  static defineSchema() {
+    return {
+      ...super.defineSchema(),
+      canonicalName: textField(""),
+      aliasGroup: textField(""),
+      bioE: integerField(0, 0),
+      original: new SchemaField({
+        sizeLevel: integerField(0, 0, 20),
+        lengthIn: numberField(0, 0),
+        weightLbs: numberField(0, 0),
+        build: textField("Medium")
+      }),
+      mutantChangesText: textField(""),
+      attributeBonuses: new ObjectField({ required: true, initial: {} }),
+      naturalWeapons: new ArrayField(new ObjectField(), {
+        required: true,
+        initial: []
+      }),
+      abilities: new ArrayField(new ObjectField(), {
+        required: true,
+        initial: []
+      }),
+      sizeLevelEffects: new ObjectField({ required: true, initial: {} }),
+      sizeLevelFormulas: new ObjectField({ required: true, initial: {} }),
+      encounterTables: new ArrayField(new ObjectField(), {
+        required: true,
+        initial: []
+      }),
+      sourceNotes: htmlField()
+    };
+  }
+}
+
+export class TMNTOSVehicleDataModel extends TMNTOSBaseItemDataModel {
+  static defineSchema() {
+    return {
+      ...super.defineSchema(),
+      category: textField(""),
+      range: textField(""),
+      topSpeed: textField(""),
+      sdc: integerField(0, 0),
+      cost: textField(""),
+      crew: textField(""),
+      passengers: textField(""),
+      cargo: textField(""),
+      details: textField("")
+    };
+  }
+}
+
+export class TMNTOSFeatureDataModel extends TMNTOSBaseItemDataModel {
+  static defineSchema() {
+    return {
+      ...super.defineSchema(),
+      group: textField(""),
+      option: textField(""),
+      bioECost: integerField(0, 0),
+      details: textField("")
     };
   }
 }
@@ -207,12 +326,12 @@ export class TMNTOSCharacterDataModel extends foundry.abstract.TypeDataModel {
 
       mutation: new SchemaField({
         mutantOrigin: textField(""),
-        animalAbilities: new HTMLField({ required: true, blank: true }),
-        naturalWeapons: new HTMLField({ required: true, blank: true }),
-        humanFeatures: new HTMLField({ required: true, blank: true }),
+        animalAbilities: htmlField(),
+        naturalWeapons: htmlField(),
+        humanFeatures: htmlField(),
         originalAnimal: textField(""),
         originalAnimalSize: textField(""),
-        sizeLevel: integerField(0, -10, 10),
+        sizeLevel: integerField(0, -10, 20),
         startingBioE: integerField(0, 0),
         sizeCosts: integerField(0, -999, 999),
         finalBioE: integerField(0, -999, 999)
@@ -230,10 +349,10 @@ export class TMNTOSCharacterDataModel extends foundry.abstract.TypeDataModel {
       }),
 
       notes: new SchemaField({
-        general: new HTMLField({ required: true, blank: true }),
-        combat: new HTMLField({ required: true, blank: true }),
-        equipment: new HTMLField({ required: true, blank: true }),
-        mutantBuild: new HTMLField({ required: true, blank: true })
+        general: htmlField(),
+        combat: htmlField(),
+        equipment: htmlField(),
+        mutantBuild: htmlField()
       })
     };
   }
