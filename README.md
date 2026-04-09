@@ -1,5 +1,7 @@
 # Teenage-Mutant-Ninja-Turtles-Other-Strangeness-REDUX-Foundry-VTT-System
 
+UPDATE 4/8/2026
+
 # TMNTOS Redux — Foundry VTT System
 
 **Teenage Mutant Ninja Turtles & Other Strangeness** for Foundry VTT v12 / v14
@@ -203,6 +205,7 @@ This Foundry VTT system implementation is released under the [MIT License](LICEN
 
 
 
+---
 
 
 PUSH UPDATE 3/21/2026
