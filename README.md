@@ -4,7 +4,7 @@ UPDATE 4/8/2026
 
 # TMNTOS Redux — Foundry VTT System
 
-**Teenage Mutant Ninja Turtles & Other Strangeness** for Foundry VTT v12 / v14
+**Teenage Mutant Ninja Turtles & Other Strangeness** for Foundry VTT v14
 
 A complete, faithful implementation of the Palladium Books classic tabletop RPG system, built from the ground up for modern Foundry VTT. Whether you're playing as lean green fighting machines or any of the hundreds of possible mutant animals, TMNTOS Redux has everything you need to run a full campaign.
 
